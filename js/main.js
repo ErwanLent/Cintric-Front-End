@@ -166,7 +166,11 @@ function loadChart()
 		helpers = Chart.helpers;
 
 
-	Chart.defaults.global.responsive = true;
+	//Chart.defaults.global.responsive = true;
+	var documentWidth = $(window).width();
+	$('#hero-bar').width(documentWidth);
+	$('#hero-bar').attr('width', documentWidth);
+	$('#hero-bar').height(500);
 
 
 	for (var i = barsCount - 1; i >= 0; i--) {
@@ -187,6 +191,7 @@ function loadChart()
 			// Get scope of the hero chart during updates
 			var heroChart = this,
 				timeout;
+
 			// Stop this running every time the update is fired
 			this.options.onAnimationComplete = randomUpdate;
 
