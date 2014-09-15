@@ -111,7 +111,7 @@ function generateListEntry(messageCounter, message)
 
 	listEntry = listEntry.replace("%NAME%", name);
 	listEntry = listEntry.replace("%MESSAGE%", message);
-	listEntry = listEntry.replace("%IMAGE%", image);
+	listEntry = listEntry.replace("empty.jpg", image);
 
 	return listEntry;
 }
