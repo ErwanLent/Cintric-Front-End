@@ -352,7 +352,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 408px;
     height: 230px; }
   .section.first .screen {
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
     background-color: white; }
 
@@ -434,6 +434,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .chat-message {
   margin: 0;
+  margin-top: 20px;
   -webkit-animation: fadein 1s;
   /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 1s;

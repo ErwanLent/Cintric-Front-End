@@ -17,14 +17,30 @@ $('document').ready(function(){
 	setTimeout(function(){
 		$('.logo').addClass('rotate');
 		$('.logo-text').removeClass('hidden');
-		//$('.marvel-device.nexus5').addClass('landscape');
 	}, 1050);
 
     /*=====================================================================================
         Messenger Animation
     =======================================================================================*/
 
-	var messages = ["Yes, what do you need?", "Where is the French cheese?", "The French cheese can be found in France.", "Wow, you're so helpful. Thanks!"];
+	var messages = 
+	[
+		"Yes, what do you need?", 
+		"Where is the French cheese?", 
+		"The French cheese can be found in France.", 
+		"Wow, you're so helpful. Thanks!",
+		"You're welcome. Anything else?",
+		"Oh yes, let's keep talking for this animation.",
+		"Good idea! I love this animation.",
+		"Erwan must have really gone ham to make this.",
+		"Tell me about it. It's fucking 6 AM.",
+		"LULZ! He just wants Mike to cream himself.",
+		"Yah.. That's probably it.",
+		"I mean, who won't when they see this?",
+		"Everyone will, no doubt about it.",
+		"Alright.. Now I'm desperate for content."
+	];
+
 	var messageCounter = 0;
 
 	setInterval(function(){
@@ -40,11 +56,14 @@ $('document').ready(function(){
 	}, 2000);
 
     /*=====================================================================================
-        Sticky Navigation
+        Sticky Navigation + Landscape Phone
     =======================================================================================*/
 
 	var navBarTopPosition = $('.navigation').offset().top;
+	var middleDevicePosition = $('.marvel-device.nexus5').offset().top - 220;
+
 	var isNavigationStuck = false;
+	var isLandscape = false;
 
 	$(document).on( 'scroll', function(){
 	    
@@ -61,6 +80,11 @@ $('document').ready(function(){
 			$('.navigation').removeClass('fixed');
 			$('.section.first').css('margin-top', '0px');
 			isNavigationStuck = false;
+		}
+
+		if (!isLandscape && (currentScrollLocation >= middleDevicePosition))
+		{
+			$('.marvel-device.nexus5').addClass('landscape');
 		}
 	});
 
@@ -96,13 +120,13 @@ function insertListEntry(entry, isAnimated)
 {
 	$('.chat-history').append(entry);
 
-	var lastEntryTopPosition = $($('.chat-history').children()[$('.chat-history').children().length - 1]).position().top;
+	var lastEntryTopPosition = $($('.screen').children()[$('.screen').children().length - 1]).position().top;
 
 	if (isAnimated)
 	{
-		$('.chat-history').stop();
-		$('.chat-history').animate({
-			scrollTop: lastEntryTopPosition + $('.chat-history').scrollTop()
+		$('.screen').stop();
+		$('.screen').animate({
+			scrollTop: lastEntryTopPosition + $('.screen').scrollTop()
 	    }, 2000);
 	}
 }
