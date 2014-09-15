@@ -8,6 +8,7 @@ $('document').ready(function(){
 	setTimeout(function(){
 		$('.logo').addClass('rotate');
 		$('.logo-text').removeClass('hidden');
+		//$('.marvel-device.nexus5').addClass('landscape');
 	}, 1050);
 
     /*=====================================================================================

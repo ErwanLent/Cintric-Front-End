@@ -38,6 +38,7 @@
 {
     height: 70px;
     border-bottom: 1px solid #ecf0f1;
+    z-index: 100;
 
     .full-logo
     {
@@ -127,13 +128,32 @@
 
 .section.first
 {
-    height: 500px;
+    min-height: 500px;
+
+    .marvel-device
+    {
+        width: 230px;
+        height: 408px;
+        margin: 30px;
+    }
+
+    .marvel-device.landscape
+    {
+        width: 408px;
+        height: 230px;
+    }
+
+    .screen
+    {
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
 
 }
 
 .section.second
 {
-    height: 500px;
+    min-height: 500px;
     background-color: white;
 
     .macbook
@@ -159,4 +179,160 @@
     -moz-transform: rotate(360deg); 
     -o-transform: rotate(360deg);
     -ms-transform: rotate(360deg); 
+}
+
+
+.chat
+{
+  font: 100%/1.5em "weblysleek_uilight", sans-serif;
+}
+
+
+#live-chat 
+{
+    font-size: 12px;
+    width: 100%;
+}
+
+#live-chat header 
+{
+    background: #293239;
+    border-radius: 5px 5px 0 0;
+    color: #fff;
+    padding: 16px 24px;
+}
+
+#live-chat h4:before 
+{
+    background: #1a8a34;
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    height: 8px;
+    margin: 0 8px 0 0;
+    width: 8px;
+}
+
+#live-chat h4 {
+    font-weight: 100;
+    font-size: 14px;
+    color: white;
+}
+
+#live-chat h5 {
+    font-weight: bold;
+    font-size: 10px;
+}
+
+#live-chat fieldset {
+    padding: 24px;
+}
+
+#live-chat input[type="text"] 
+{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 8px;
+    outline: none;
+    display: inline-block;
+}
+
+.send-button
+{
+    display: inline-block;
+    font: 100%/1.5em "weblysleek_uilight", sans-serif;
+    outline: none;
+    background-color: #57AD68;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 10px; 
+    border-bottom: 3px #478553 solid;
+    border-left: 1px #478553 solid;
+    border-right: 1px #478553 solid;
+    font-size: 14px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+}
+
+.chat-message-counter 
+{
+    background: #e62727;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: none;
+    font-size: 12px;
+    font-weight: bold;
+    height: 28px;
+    left: 0;
+    line-height: 28px;
+    margin: -15px 0 0 -15px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 28px;
+}
+
+.chat-close 
+{
+    background: #1b2126;
+    border-radius: 50%;
+    color: #fff;
+    display: block;
+    float: right;
+    font-size: 10px;
+    height: 16px;
+    line-height: 16px;
+    margin: 2px 0 0 0;
+    text-align: center;
+    width: 16px;
+}
+
+.chat 
+{
+    background: #fff;
+}
+
+.chat-history 
+{
+    padding: 8px 24px;
+    overflow-y: hidden;
+}
+
+.chat-message 
+{
+    margin: 0;
+}
+
+.chat-message img 
+{
+    border-radius: 50%;
+    float: left;
+}
+
+.chat-message-content 
+{
+    h5
+    {
+        color: $paragraph-color;
+        font-family: 'weblysleek_uisemibold';
+    }
+}
+
+.chat-time 
+{
+    float: right;
+    font-size: 10px;
+}
+
+.chat-feedback 
+{
+    font-style: italic;
+    text-align: center;
+}
+
+.chat-feedback img
+{
+    width: 45px;
+    display: inline-block;
 }
