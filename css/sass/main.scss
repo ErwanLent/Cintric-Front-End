@@ -179,13 +179,13 @@
         width: 1000px;
         height: 580px;
         margin: auto;
-        margin: 100px auto 100px auto;
+        margin: 50px auto 100px auto;
     }
 }
 
 .separator
 {
-    background-color: #3498db;
+    background-color: $light-blue;
     min-height: 200px;
 
     h1
@@ -210,6 +210,42 @@
             font-size: 80px;
             line-height: 1;
             padding: 0px 75px;
+        }
+    }
+}
+
+.section.products
+{
+    min-height: 500px;
+}
+
+.section.early-access
+{
+    min-height: 500px;
+    background-color: white;
+}
+
+footer
+{
+    background: rgba(44,62,80,0.5);
+    padding: 30px;
+    color: white;
+    font-size: 14px;
+    font-family: 'weblysleek_uisemibold';
+
+    .right
+    {
+        float: right;
+        
+        ul
+        {
+            margin-bottom: 10px;;
+            padding: 0;
+
+            li
+            {
+                display: inline-block;
+            }
         }
     }
 }

@@ -22,35 +22,27 @@ $('document').ready(function(){
 
 	var messages = 
 	[
-		"Yes, what do you need?", 
-		"Where is the French cheese?", 
-		"The French cheese can be found in France.", 
-		"Wow, you're so helpful. Thanks!",
-		"You're welcome. Anything else?",
-		"Oh yes, let's keep talking for this animation.",
-		"Good idea! I love this animation.",
-		"Erwan must have really gone ham to make this.",
-		"Tell me about it. It's fucking 6 AM.",
-		"LULZ! He just wants Mike to cream himself.",
-		"Yah.. That's probably it.",
-		"I mean, who won't when they see this?",
-		"Everyone will, no doubt about it.",
-		"Alright.. Now I'm desperate for content."
+		"Hey, I can’t find anyone to help me. Does the medical tent have aspirin?",
+		"Hi Camilia, the medical tent has aspirin and is location by the South entrance. Should I notify staff that you need medical assistance?", 
+		"Wow, thanks! And I’ll be alright. Just a headache :)",
+		"You’re welcome! Feel better, and let us know if there’s anything else we can do!"
 	];
 
-	var messageCounter = 0;
+	var messageCounter = 1;
 
 	setInterval(function(){
 
-		if (messageCounter < messages.length)
+		if (messageCounter >= messages.length)
 		{
-			var messageEntry = generateListEntry(messageCounter, messages[messageCounter]);
-			messageCounter++;
-
-			insertListEntry(messageEntry, true);
+			messageCounter = 0;
 		}
 
-	}, 2000);
+		var messageEntry = generateListEntry(messageCounter, messages[messageCounter]);
+		messageCounter++;
+
+		insertListEntry(messageEntry, true);
+
+	}, 3000);
 
     /*=====================================================================================
         Sticky Navigation + Landscape Phone
@@ -96,13 +88,13 @@ function generateListEntry(messageCounter, message)
 
 	switch((messageCounter + 1) % 2)
 	{
-		case 0:
+		case 1:
 			name = "Camelia Moher";
 			image = "camelia.jpg";
 			break;
-		case 1:
-			name = "Kroger Representative";
-			image = "kroger.svg";
+		case 0:
+			name = "Bunbury Staff";
+			image = "bmf.jpg";
 			break;
 	}
 
