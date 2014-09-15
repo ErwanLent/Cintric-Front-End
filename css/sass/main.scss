@@ -217,12 +217,67 @@
 .section.products
 {
     min-height: 500px;
+
+    img
+    {
+        width: 700px;
+        margin-top: 20px;
+    }
 }
 
 .section.early-access
 {
     min-height: 500px;
     background-color: white;
+
+    .email-form
+    {
+        margin-top: 70px;
+
+        input
+        {
+            font-family: 'weblysleek_uisemibold';
+            width: 400px;
+            text-indent: 10px;
+            height: 50px;
+            font-size: 18px;
+            border: none;
+            display: block;
+            margin: auto;
+            outline: 0;
+            border: 1px solid $light-blue;
+        }
+
+        input:focus
+        {
+            outline: 0;
+        }
+
+        button
+        {
+            font-family: 'weblysleek_uisemibold';
+            display: block;
+            width: 400px;
+            margin: auto;
+            margin-top: 15px;
+            background-color: $light-blue;
+            outline: 0;
+            border: 0;
+            color: white;
+            padding: 10px;
+
+            -webkit-transition: all ease 0.3s;
+            -moz-transition: all ease 0.3s;
+            -o-transition: all ease 0.3s;
+            -ms-transition: all ease 0.3s;
+            transition: all ease 0.3s;
+        }
+
+        button:hover
+        {
+            background-color: $blue-header-color;
+        }
+    }
 }
 
 footer
