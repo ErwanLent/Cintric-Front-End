@@ -1,0 +1,136 @@
+@import 'base';
+
+.header
+{
+    width: 100%;
+    height: 500px;
+    background-image: url('/img/header-bg.jpg');
+    background-size: cover;
+    color: white;
+    text-align: center;
+
+    .overlay
+    {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, .90);
+    }
+
+    .logo
+    {
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        margin-top: 100px;
+    }
+
+    .logo-text
+    {
+        color: #565656;
+        font-family: 'allerbold';
+        font-size: 90px;
+        line-height: 85px;
+    }
+
+}
+
+.navigation
+{
+    height: 70px;
+
+    .full-logo
+    {
+        $nav-bar-width: 200px;
+
+        float: left;
+        background-image: url('/img/full-logo.png');
+        background-repeat: no-repeat;
+        background-size: $nav-bar-width auto;
+        width: $nav-bar-width;
+        height: 100%;
+        background-position: 0px 9px;
+    }
+
+    .page-links
+    {
+        padding: 0px;
+        margin: 0px;
+        float: right;
+        font-size: 19px;
+        font-family: 'weblysleek_uisemilight';
+        font-weight: 600;
+        margin-top: 12px;
+
+        li
+        {
+            display: inline-block;
+            padding: 10px;
+            cursor: pointer;
+            
+            a
+            {
+                color: #2c3e50;
+                text-decoration: none;
+            }
+
+
+        }
+
+        li:hover
+        {
+            a
+            {
+                $hover-color: #3498db;
+                color: $hover-color;
+                border-bottom:1px dotted $hover-color;
+            }
+        }
+    }
+}
+
+.navigation.fixed
+{
+    // box-shadow: 0px 2px 33px rgba(0, 0, 0, 0.35);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background-color: white;
+}
+
+.section
+{
+    background-color: $dark-section-color;
+}
+
+.section.first
+{
+    height: 500px;
+
+    h1
+    {
+        font-family: 'weblysleek_uilight';
+        text-align: center;
+        padding-top: 100px;
+        color: $blue-header-color;
+        font-size: 50px;
+        font-weight: 100;
+    }
+}
+
+.section.second
+{
+    height: 500px;
+}
+
+.rotate
+{
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+
+    -webkit-transform: rotate(360deg); 
+    -moz-transform: rotate(360deg); 
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg); 
+}
