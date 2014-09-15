@@ -1,4 +1,5 @@
 @import 'base';
+@import 'animations';
 
 .header
 {
@@ -147,6 +148,7 @@
     {
         overflow-y: scroll;
         overflow-x: hidden;
+        background-color: white;
     }
 
 }
@@ -168,20 +170,6 @@
     }
 }
 
-.rotate
-{
-    -webkit-transition-duration: 0.8s;
-    -moz-transition-duration: 0.8s;
-    -o-transition-duration: 0.8s;
-    transition-duration: 0.8s;
-
-    -webkit-transform: rotate(360deg); 
-    -moz-transform: rotate(360deg); 
-    -o-transform: rotate(360deg);
-    -ms-transform: rotate(360deg); 
-}
-
-
 .chat
 {
   font: 100%/1.5em "weblysleek_uilight", sans-serif;
@@ -192,68 +180,45 @@
 {
     font-size: 12px;
     width: 100%;
+
+    fieldset 
+    {
+        padding: 24px;
+    }
+
+    header 
+    {
+        background: #293239;
+        color: #fff;
+        padding: 16px 24px;
+    }
+
+    h4:before 
+    {
+        background: #1a8a34;
+        border-radius: 50%;
+        content: "";
+        display: inline-block;
+        height: 8px;
+        margin: 0 8px 0 0;
+        width: 8px;
+    }
+
+    h4 
+    {
+        font-weight: 100;
+        font-size: 14px;
+        color: white;
+    }
+
+    h5 
+    {
+        font-weight: bold;
+        font-size: 10px;
+    }
 }
 
-#live-chat header 
-{
-    background: #293239;
-    border-radius: 5px 5px 0 0;
-    color: #fff;
-    padding: 16px 24px;
-}
 
-#live-chat h4:before 
-{
-    background: #1a8a34;
-    border-radius: 50%;
-    content: "";
-    display: inline-block;
-    height: 8px;
-    margin: 0 8px 0 0;
-    width: 8px;
-}
-
-#live-chat h4 {
-    font-weight: 100;
-    font-size: 14px;
-    color: white;
-}
-
-#live-chat h5 {
-    font-weight: bold;
-    font-size: 10px;
-}
-
-#live-chat fieldset {
-    padding: 24px;
-}
-
-#live-chat input[type="text"] 
-{
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    padding: 8px;
-    outline: none;
-    display: inline-block;
-}
-
-.send-button
-{
-    display: inline-block;
-    font: 100%/1.5em "weblysleek_uilight", sans-serif;
-    outline: none;
-    background-color: #57AD68;
-    border: none;
-    color: white;
-    padding: 5px 20px;
-    border-radius: 10px; 
-    border-bottom: 3px #478553 solid;
-    border-left: 1px #478553 solid;
-    border-right: 1px #478553 solid;
-    font-size: 14px;
-    margin-bottom: 15px;
-    margin-left: 5px;
-}
 
 .chat-message-counter 
 {
@@ -302,6 +267,11 @@
 .chat-message 
 {
     margin: 0;
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: fadein 1s; /* Firefox < 16 */
+    -ms-animation: fadein 1s; /* Internet Explorer */
+    -o-animation: fadein 1s; /* Opera < 12.1 */
+    animation: fadein 1s;
 }
 
 .chat-message img 
