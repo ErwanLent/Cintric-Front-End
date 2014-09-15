@@ -2542,9 +2542,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .section.products {
   min-height: 500px; }
-  .section.products img {
-    width: 700px;
-    margin-top: 20px; }
+  .section.products .product-list {
+    margin-top: 50px;
+    margin-bottom: 100px; }
+  .section.products .product {
+    display: inline-block;
+    padding: 0px 40px; }
+    .section.products .product img {
+      width: 100px;
+      margin-top: 20px; }
+    .section.products .product p {
+      width: 250px; }
 
 .section.early-access {
   min-height: 500px;

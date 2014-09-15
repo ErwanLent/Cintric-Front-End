@@ -218,10 +218,27 @@
 {
     min-height: 500px;
 
-    img
+    .product-list
     {
-        width: 700px;
-        margin-top: 20px;
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+    
+    .product
+    {
+        display: inline-block;
+        padding: 0px 40px;
+        
+        img
+        {
+            width: 100px;
+            margin-top: 20px;
+        }
+
+        p
+        {
+            width: 250px;
+        }
     }
 }
 
