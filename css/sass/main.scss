@@ -37,6 +37,7 @@
 .navigation
 {
     height: 70px;
+    border-bottom: 1px solid #ecf0f1;
 
     .full-logo
     {
@@ -90,7 +91,7 @@
 
 .navigation.fixed
 {
-    // box-shadow: 0px 2px 33px rgba(0, 0, 0, 0.35);
+    //box-shadow: 0px 2px 33px rgba(0, 0, 0, 0.35);
     position: fixed;
     top: 0px;
     width: 100%;
@@ -100,26 +101,51 @@
 .section
 {
     background-color: $dark-section-color;
+
+    h1
+    {
+        font-family: 'weblysleek_uilight';
+        text-align: center;
+        color: $blue-header-color;
+        font-size: 50px;
+        font-weight: 100;
+        padding-top: 100px;
+    }
+
+    p
+    {
+        text-align: center;
+        font-size: 18px;
+        font-family: 'weblysleek_uilight';
+        font-weight: 600;
+        line-height: 1.8;
+        color: $paragraph-color;
+        width: 80%;
+        margin: 20px auto 20px auto;
+    }
 }
 
 .section.first
 {
     height: 500px;
 
-    h1
-    {
-        font-family: 'weblysleek_uilight';
-        text-align: center;
-        padding-top: 100px;
-        color: $blue-header-color;
-        font-size: 50px;
-        font-weight: 100;
-    }
 }
 
 .section.second
 {
     height: 500px;
+    background-color: white;
+
+    .macbook
+    {
+        background-image: url('/img/macbook.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 1000px;
+        height: 580px;
+        margin: auto;
+        margin: 100px auto 100px auto;
+    }
 }
 
 .rotate

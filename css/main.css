@@ -235,7 +235,8 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 85px; }
 
 .navigation {
-  height: 70px; }
+  height: 70px;
+  border-bottom: 1px solid #ecf0f1; }
   .navigation .full-logo {
     float: left;
     background-image: url("/img/full-logo.png");
@@ -271,19 +272,37 @@ h1, h2, h3, h4, h5, h6 {
 
 .section {
   background-color: #ecf0f1; }
+  .section h1 {
+    font-family: 'weblysleek_uilight';
+    text-align: center;
+    color: #2c3e50;
+    font-size: 50px;
+    font-weight: 100;
+    padding-top: 100px; }
+  .section p {
+    text-align: center;
+    font-size: 18px;
+    font-family: 'weblysleek_uilight';
+    font-weight: 600;
+    line-height: 1.8;
+    color: #4e5758;
+    width: 80%;
+    margin: 20px auto 20px auto; }
 
 .section.first {
   height: 500px; }
-  .section.first h1 {
-    font-family: 'weblysleek_uilight';
-    text-align: center;
-    padding-top: 100px;
-    color: #2c3e50;
-    font-size: 50px;
-    font-weight: 100; }
 
 .section.second {
-  height: 500px; }
+  height: 500px;
+  background-color: white; }
+  .section.second .macbook {
+    background-image: url("/img/macbook.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1000px;
+    height: 580px;
+    margin: auto;
+    margin: 100px auto 100px auto; }
 
 .rotate {
   -webkit-transition-duration: 0.8s;
