@@ -11,6 +11,16 @@
     z-index: 1;
 }
 
+.section-header
+{
+    font-family: 'weblysleek_uilight';
+    text-align: center;
+    color: $blue-header-color;
+    font-size: 50px;
+    font-weight: 100;
+    padding: 50px 0px;
+}
+
 .button
 {
     font-family: weblysleek_uisemilight;
@@ -96,6 +106,8 @@
 
 .header.sub
 {
+    height: 300px;
+
     .inner
     {
         img
@@ -103,7 +115,7 @@
             width: 200px;
             height: 200px;
             margin: auto;
-            margin-top: 100px;
+            margin-top: 15px;
         }
     }
 }
@@ -303,6 +315,11 @@
     background-position: center;
     background-size: cover;
 
+    .overlay
+    {
+        background-color: rgba(255,255,255,.7);
+    }
+
     .product-list
     {
         margin-top: 50px;
@@ -372,6 +389,49 @@
         button:hover
         {
             background-color: $blue-header-color;
+        }
+    }
+}
+
+.person
+{
+    padding: 50px;
+    min-height: 300px;
+    border-bottom: 1px solid #BABBBB;
+    
+    .avatar
+    {
+        text-align: center;
+        float: left;
+        width: 350px;
+
+        img
+        {
+            width: 250px;
+        }
+
+        p
+        {
+            font-weight: 600;
+            font-size: 19px;
+        }
+    }
+
+    .bio
+    {
+        font-family: weblysleek_uisemilight;
+        font-weight: 600;
+
+        p
+        {
+            color: $font-header-color;
+        }
+
+        h3
+        {
+            text-align: center;
+            font-size: 30px;
+            color: $blue-header-color;
         }
     }
 }
