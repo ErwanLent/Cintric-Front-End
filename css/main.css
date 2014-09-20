@@ -2364,6 +2364,13 @@ h1, h2, h3, h4, h5, h6 {
   -o-transform: rotate(360deg);
   -ms-transform: rotate(360deg); }
 
+.ease {
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+  transition: all ease 0.3s; }
+
 @keyframes fadein {
   from {
     opacity: 0; }
@@ -2408,39 +2415,74 @@ h1, h2, h3, h4, h5, h6 {
   height: 500px;
   position: absolute;
   left: 0;
-  top: 0px;
+  bottom: 0;
   z-index: 1; }
+
+.button {
+  font-family: weblysleek_uisemilight;
+  font-weight: 600;
+  font-size: 18px;
+  background-color: #f1f1f1;
+  color: #565656;
+  width: 200px;
+  border-radius: 7px;
+  padding: 7px 0px;
+  margin: 50px auto;
+  cursor: pointer;
+  width: 175px; }
+
+.button:hover {
+  color: white;
+  background-color: #2980b9; }
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9); }
 
 .header {
   width: 100%;
   height: 500px;
-  background-size: cover;
   color: white;
-  text-align: center;
-  position: absolute;
-  top: 0;
   z-index: 100; }
   .header .overlay {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.9); }
-  .header .logo {
-    width: 200px;
-    height: 200px;
-    margin: auto;
-    margin-top: 100px; }
-  .header .logo-text {
+    background-color: rgba(255, 255, 255, 0.8); }
+  .header .inner .logo-text {
     color: #565656;
-    font-family: 'allerbold';
+    font-family: allerbold;
     font-size: 90px;
-    line-height: 85px; }
+    line-height: 65px; }
+  .header .inner .logo-content {
+    width: 395px;
+    height: 65px;
+    margin: auto; }
+    .header .inner .logo-content .logo {
+      width: 95px;
+      float: left; }
+  .header .inner .button {
+    margin-top: 35px; }
+  .header .inner h3 {
+    margin-top: 60px;
+    color: #565656;
+    font-family: weblysleek_uilight;
+    font-weight: 100;
+    font-size: 40px; }
+
+.header.sub .inner img {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  margin-top: 100px; }
+
+.header.home .inner {
+  padding-top: 100px; }
 
 .navigation {
   height: 70px;
   border-bottom: 1px solid #ecf0f1;
-  z-index: 100;
-  margin-top: 500px; }
+  z-index: 1000; }
   .navigation .full-logo {
+    display: none;
     float: left;
     background-image: url("/img/full-logo.png");
     background-repeat: no-repeat;
@@ -2493,25 +2535,32 @@ h1, h2, h3, h4, h5, h6 {
     width: 80%;
     margin: 20px auto 20px auto; }
 
-.section.first {
+.section.demo {
   min-height: 500px; }
-  .section.first .marvel-device {
+  .section.demo .marvel-device {
     width: 230px;
     height: 408px;
     margin: 30px;
     margin-bottom: 100px; }
-  .section.first .marvel-device.landscape {
+  .section.demo .marvel-device.landscape {
     width: 408px;
     height: 230px; }
-  .section.first .screen {
+  .section.demo .screen {
     overflow-y: hidden;
     overflow-x: hidden;
     background-color: white; }
 
-.section.second {
-  min-height: 500px;
+.section.analytics {
+  min-height: 980px;
   background-color: white; }
-  .section.second .macbook {
+  .section.analytics .content {
+    position: absolute;
+    text-align: center;
+    width: 100%; }
+  .section.analytics .overlay {
+    z-index: 100;
+    position: relative; }
+  .section.analytics .macbook {
     background-image: url("/img/macbook.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -2541,7 +2590,11 @@ h1, h2, h3, h4, h5, h6 {
       padding: 0px 75px; }
 
 .section.products {
-  min-height: 500px; }
+  min-height: 500px;
+  background-color: white;
+  background-image: url("/img/logo.svg");
+  background-position: center;
+  background-size: cover; }
   .section.products .product-list {
     margin-top: 50px;
     margin-bottom: 100px; }
@@ -2582,17 +2635,12 @@ h1, h2, h3, h4, h5, h6 {
       outline: 0;
       border: 0;
       color: white;
-      padding: 10px;
-      -webkit-transition: all ease 0.3s;
-      -moz-transition: all ease 0.3s;
-      -o-transition: all ease 0.3s;
-      -ms-transition: all ease 0.3s;
-      transition: all ease 0.3s; }
+      padding: 10px; }
     .section.early-access .email-form button:hover {
       background-color: #2c3e50; }
 
 footer {
-  background: rgba(44, 62, 80, 0.5);
+  background: #2c3e50;
   padding: 30px;
   color: white;
   font-size: 14px;

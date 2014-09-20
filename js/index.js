@@ -16,6 +16,10 @@ $('document').ready(function(){
 		$('.logo-text').removeClass('hidden');
 	}, 1050);
 
+	setTimeout(function(){
+		$('.call').removeClass('hidden');
+	}, 1600);
+
     /*=====================================================================================
         Messenger Animation
     =======================================================================================*/
@@ -23,7 +27,7 @@ $('document').ready(function(){
 	var messages = 
 	[
 		"Hey, I can’t find anyone to help me. Does the medical tent have aspirin?",
-		"Hi Camilia, the medical tent has aspirin and is location by the South entrance. Should I notify staff that you need medical assistance?", 
+		"Hi Camelia, the medical tent has aspirin and is location by the South entrance. Should I notify staff that you need medical assistance?", 
 		"Wow, thanks! And I’ll be alright. Just a headache :)",
 		"You’re welcome! Feel better, and let us know if there’s anything else we can do!"
 	];
@@ -43,41 +47,6 @@ $('document').ready(function(){
 		insertListEntry(messageEntry, true);
 
 	}, 3000);
-
-    /*=====================================================================================
-        Sticky Navigation + Landscape Phone
-    =======================================================================================*/
-
-	var navBarTopPosition = $('.navigation').offset().top;
-	var middleDevicePosition = $('.marvel-device.nexus5').offset().top - 220;
-
-	var isNavigationStuck = false;
-	var isLandscape = false;
-
-	$(document).on( 'scroll', function(){
-	    
-		var currentScrollLocation = $(document).scrollTop();
-
-		if ((currentScrollLocation >= navBarTopPosition) && !isNavigationStuck)
-		{
-			$('.navigation').addClass('fixed');
-			$('.section.first').css('margin-top', (500 + $('.navigation').height()) + 'px');
-			isNavigationStuck = true;
-		}
-		else if ((currentScrollLocation < navBarTopPosition) && isNavigationStuck)
-		{
-			$('.navigation').removeClass('fixed');
-			$('.section.first').css('margin-top', '0px');
-			isNavigationStuck = false;
-		}
-
-		if (!isLandscape && (currentScrollLocation >= middleDevicePosition))
-		{
-			$('.marvel-device.nexus5').addClass('landscape');
-		}
-	});
-
-
 });
 
 
@@ -93,7 +62,7 @@ function generateListEntry(messageCounter, message)
 			image = "camelia.jpg";
 			break;
 		case 0:
-			name = "Bunbury Staff";
+			name = "Festival Staff";
 			image = "bmf.jpg";
 			break;
 	}
@@ -122,31 +91,6 @@ function insertListEntry(entry, isAnimated)
 
 function loadChart()
 {
-	// Colour variables
-	var red = "#bf616a",
-		blue = "#5B90BF",
-		orange = "#d08770",
-		yellow = "#ebcb8b",
-		green = "#a3be8c",
-		teal = "#96b5b4",
-		pale_blue = "#8fa1b3",
-		purple = "#b48ead",
-		brown = "#ab7967";
-
-
-		var baseDataset = {
-			fill: 'rgba(222,225,232,0.4)',
-			stroke: 'rgba(222,225,232,1)',
-			highlight: 'rgba(222,225,232,0.8)',
-			highlightStroke: 'rgba(222,225,232,1)'
-		},
-		overlayDataset = {
-			fill: 'rgba(91,144,191,0.4)',
-			stroke: 'rgba(91,144,191,1)',
-			highlight: 'rgba(91,144,191,0.8)',
-			highlightStroke: 'rgba(91,144,191,1)'
-		};
-
 	var data = [],
 		barsCount = 50,
 		labels = new Array(barsCount),
@@ -154,17 +98,22 @@ function loadChart()
 		$id = function(id){
 			return document.getElementById(id);
 		},
-		random = function(max){ return Math.round(Math.random()*100)},
+		random = function(max){ 
+			return Math.round(Math.random()*100)
+		},
 		helpers = Chart.helpers;
 
 
 	//Chart.defaults.global.responsive = true;
-	var documentWidth = $(window).width();
-	$('#hero-bar').width(documentWidth);
-	$('#hero-bar').attr('width', documentWidth);
-	$('#hero-bar').height(500);
+	var canvasWidth = $(window).width();
+	var canvasHeight = 700;
 
+	$('#hero-bar').width(canvasWidth);
+	$('#hero-bar').height(canvasHeight);
 
+	$('#hero-bar').attr('width', canvasWidth);
+	$('#hero-bar').attr('height', canvasHeight);
+	
 	for (var i = barsCount - 1; i >= 0; i--) {
 		data.push(Math.round(Math.random() * 100));
 	};

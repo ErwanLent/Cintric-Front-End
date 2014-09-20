@@ -7,57 +7,125 @@
     height: 500px;
     position: absolute;
     left: 0;
-    top: 0px;
+    bottom: 0;
     z-index: 1;
+}
+
+.button
+{
+    font-family: weblysleek_uisemilight;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: $button-background-color;
+    color: $font-header-color;
+    width: 200px;
+    border-radius: 7px;
+    padding: 7px 0px;
+    margin: 50px auto;
+    cursor: pointer;
+    width: 175px;
+}
+
+.button:hover
+{
+    color: white;
+    background-color: $light-blue;
+}
+
+.overlay
+{
+    width: 100%;
+    height: 100%;
+    background-color: $overlay-color;
 }
 
 .header
 {
     width: 100%;
     height: 500px;
-    background-size: cover;
+    // background-image: url('/img/header-bg.jpg');
+    // background-position: center;
+    //background-size: cover;
     color: white;
-    text-align: center;
-    position: absolute;
-    top: 0;
     z-index: 100;
 
     .overlay
     {
-        width: 100%;
-        height: 100%;
-        background-color: rgba(255, 255, 255, .90);
+        background-color: rgba(255, 255, 255, .80);
     }
 
-    .logo
+    .inner
     {
-        width: 200px;
-        height: 200px;
-        margin: auto;
-        margin-top: 100px;
-    }
+        .logo-text
+        {
+            color: $font-header-color;
+            font-family: allerbold;
+            font-size: 90px;
+            line-height: 65px;
+        }
 
-    .logo-text
+        .logo-content
+        {
+            width: 395px;
+            height: 65px;
+            margin: auto;
+
+            .logo
+            {
+                width: 95px;
+                float: left;
+            }
+        }
+
+
+        .button
+        {
+            margin-top: 35px;
+        }
+
+        h3
+        {
+            margin-top: 60px;
+            color: $font-header-color;
+            font-family: weblysleek_uilight;
+            font-weight: 100;
+            font-size: 40px;
+        }
+    }
+}
+
+.header.sub
+{
+    .inner
     {
-        color: #565656;
-        font-family: 'allerbold';
-        font-size: 90px;
-        line-height: 85px;
+        img
+        {
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            margin-top: 100px;
+        }
     }
+}
 
+.header.home
+{
+    .inner
+    {
+        padding-top: 100px;
+    }
 }
 
 .navigation
 {
     height: 70px;
     border-bottom: 1px solid #ecf0f1;
-    z-index: 100;
-    margin-top: 500px;
+    z-index: 1000;
 
     .full-logo
     {
         $nav-bar-width: 200px;
-
+        display: none;
         float: left;
         background-image: url('/img/full-logo.png');
         background-repeat: no-repeat;
@@ -139,7 +207,7 @@
     }
 }
 
-.section.first
+.section.demo
 {
     min-height: 500px;
 
@@ -166,10 +234,23 @@
 
 }
 
-.section.second
+.section.analytics
 {
-    min-height: 500px;
+    min-height: 980px;
     background-color: white;
+
+    .content
+    {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+    }
+
+    .overlay
+    {
+        z-index: 100;
+        position: relative;
+    }
 
     .macbook
     {
@@ -217,6 +298,10 @@
 .section.products
 {
     min-height: 500px;
+    background-color: white;
+    background-image: url('/img/logo.svg');
+    background-position: center;
+    background-size: cover;
 
     .product-list
     {
@@ -282,12 +367,6 @@
             border: 0;
             color: white;
             padding: 10px;
-
-            -webkit-transition: all ease 0.3s;
-            -moz-transition: all ease 0.3s;
-            -o-transition: all ease 0.3s;
-            -ms-transition: all ease 0.3s;
-            transition: all ease 0.3s;
         }
 
         button:hover
@@ -299,7 +378,7 @@
 
 footer
 {
-    background: rgba(44,62,80,0.5);
+    background: $blue-header-color;
     padding: 30px;
     color: white;
     font-size: 14px;

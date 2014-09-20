@@ -11,6 +11,15 @@
     -ms-transform: rotate(360deg); 
 }
 
+.ease
+{
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }

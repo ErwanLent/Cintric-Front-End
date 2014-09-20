@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 
     watch: {
       scripts: {
-        files: [ 'css/sass/*.scss' ],
+        files: [ 'css/sass/*.scss'],
         tasks: ['default'],
       },
     },
@@ -17,10 +17,10 @@ module.exports = function(grunt) {
         banner: '/*! Last Modified: <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
       build: {
-        cwd: 'css/',
         expand: true,
-        src: ['/js/*.js', '!*.min.js'],
-        dest: '',
+        cwd: 'js/',
+        src: ['*.js', '!*.min.js'],
+        dest: 'js/',
         ext: '.min.js'
       }
     },
@@ -60,6 +60,9 @@ module.exports = function(grunt) {
   // Minify CSS
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-  // Compile SASS
+  // Minify JS
+  grunt.registerTask('minify', ['uglify']);
+
+  // CSS Compilation
   grunt.registerTask('default', ['sass', 'cssmin']);
 };
