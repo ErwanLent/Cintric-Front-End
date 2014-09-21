@@ -13,6 +13,7 @@ $(document).ready(function(){
 
 	var isNavigationStuck = false;
 	var isLandscape = false;
+	var isLogoShowing = false;
 
 	$(document).on( 'scroll', function(){
 	    
@@ -22,7 +23,12 @@ $(document).ready(function(){
 		{
 			$('.navigation').addClass('fixed');
 			$('.section.products').css('margin-top', ($('.navigation').height()) + 'px');
-			$('.full-logo').fadeIn();
+
+			if ($(window).width() > 815)
+			{
+				$('.full-logo').fadeIn();
+				isLogoShowing = true;
+			}
 
 			isNavigationStuck = true;
 		}
@@ -32,12 +38,21 @@ $(document).ready(function(){
 			$('.section.products').css('margin-top', '0px');
 			$('.full-logo').fadeOut();
 
+			isLogoShowing = false;
 			isNavigationStuck = false;
 		}
 
-		if (!isLandscape && (currentScrollLocation >= middleDevicePosition))
+		if (!isLandscape && (currentScrollLocation >= middleDevicePosition) && ($(window).width() > 650))
 		{
 			$('.marvel-device.nexus5').addClass('landscape');
 		}
+	});
+
+	$(window).resize(function() {
+  		if ($(window).width() < 815 && isLogoShowing)
+  		{
+  			$('.full-logo').fadeOut();
+  			isLogoShowing = false;
+  		}
 	});
 });

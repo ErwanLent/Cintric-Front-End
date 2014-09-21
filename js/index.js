@@ -13,6 +13,13 @@ $('document').ready(function(){
 
 	setTimeout(function(){
 		$('.logo').addClass('rotate');
+
+		if ($(window).width() < 815)
+		{
+			$('.logo-text').removeClass('fadeInRight');
+			$('.logo-text').addClass('fadeInUp');
+		}
+
 		$('.logo-text').removeClass('hidden');
 	}, 1050);
 
@@ -104,7 +111,7 @@ function loadChart()
 		helpers = Chart.helpers;
 
 
-	//Chart.defaults.global.responsive = true;
+	Chart.defaults.global.responsive = true;
 	var canvasWidth = $(window).width();
 	var canvasHeight = 700;
 

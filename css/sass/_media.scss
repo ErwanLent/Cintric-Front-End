@@ -2,8 +2,63 @@
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media screen and (max-width: 815px) {
+	.navigation
+	{
+		.inner
+		{
+			.full-logo
+			{
+				display: none;
+			}
 
+			.page-links
+			{
+				float: none;
+				text-align: center;
+			}
+		}
+	}	
+
+	.person
+	{
+		.avatar
+		{
+			float: none;
+			width: 100%;
+		}
+
+		.bio
+		{
+			h3
+			{
+				text-align: center;
+			}
+		}
+	}
+
+	.header.home
+	{
+		.inner
+		{
+			.logo-content
+			{
+				height: 100%;
+				
+				img
+				{
+					float: none;
+					width: 125px;
+				}
+
+				.logo-text
+				{
+					font-size: 68px;
+				}
+			}
+		}
+
+	}
 }
 
 @media print,

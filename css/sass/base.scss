@@ -1,6 +1,5 @@
 @import 'fonts';
 @import 'colors';
-@import 'media';
 
 $viewport-size: 1180px;
 
@@ -16,6 +15,7 @@ html {
     font-size: 1em;
     line-height: 1.4;
     font-family: 'weblysleek_uilight';
+    overflow-x: hidden;
 }
 
 ::-moz-selection {
@@ -135,6 +135,7 @@ h1, h2, h3, h4, h5, h6
     height: 100%;
     max-width: $viewport-size;
     margin: auto;
+    //padding: 10px;
 }
 
 .center
