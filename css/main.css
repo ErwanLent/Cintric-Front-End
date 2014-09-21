@@ -2624,10 +2624,13 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 500px;
   background-color: white; }
   .section.early-access .email-form {
-    margin-top: 70px; }
+    margin-top: 70px;
+    margin-right: 5px;
+    margin-left: 5px; }
     .section.early-access .email-form input {
       font-family: 'weblysleek_uisemibold';
-      width: 400px;
+      max-width: 400px;
+      width: 100%;
       text-indent: 10px;
       height: 50px;
       font-size: 18px;
@@ -2641,7 +2644,8 @@ h1, h2, h3, h4, h5, h6 {
     .section.early-access .email-form button {
       font-family: 'weblysleek_uisemibold';
       display: block;
-      width: 400px;
+      width: 100%;
+      max-width: 400px;
       margin: auto;
       margin-top: 15px;
       background-color: #2980b9;
@@ -2810,3 +2814,14 @@ footer {
       width: 125px; }
     .header.home .inner .logo-content .logo-text {
       font-size: 68px; } }
+@media screen and (max-width: 700px) {
+  .section.analytics .macbook {
+    height: 400px; } }
+@media screen and (max-width: 500px) {
+  .section.analytics {
+    min-height: 800px; }
+    .section.analytics .macbook {
+      height: 280px; } }
+@media screen and (max-width: 390px) {
+  .section.analytics .macbook {
+    height: 210px; } }

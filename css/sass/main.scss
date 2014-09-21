@@ -355,11 +355,14 @@
     .email-form
     {
         margin-top: 70px;
+        margin-right: 5px;
+            margin-left: 5px;
 
         input
         {
             font-family: 'weblysleek_uisemibold';
-            width: 400px;
+            max-width: 400px;
+            width: 100%;
             text-indent: 10px;
             height: 50px;
             font-size: 18px;
@@ -379,7 +382,8 @@
         {
             font-family: 'weblysleek_uisemibold';
             display: block;
-            width: 400px;
+            width: 100%;
+            max-width: 400px;
             margin: auto;
             margin-top: 15px;
             background-color: $light-blue;

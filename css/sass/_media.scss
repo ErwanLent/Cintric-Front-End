@@ -44,7 +44,7 @@
 			.logo-content
 			{
 				height: 100%;
-				
+
 				img
 				{
 					float: none;
@@ -58,6 +58,32 @@
 			}
 		}
 
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.section.analytics .macbook
+	{
+		height: 400px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.section.analytics
+	{
+		min-height: 800px;
+
+		.macbook
+		{
+			height: 280px;
+		}
+	}
+}
+
+@media screen and (max-width: 390px) {
+	.section.analytics .macbook
+	{
+		height: 210px;
 	}
 }
 
