@@ -2478,11 +2478,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .header.sub {
   height: 300px; }
-  .header.sub .inner img {
-    width: 200px;
-    height: 200px;
-    margin: auto;
-    margin-top: 15px; }
+  .header.sub .inner {
+    padding-top: 100px; }
+    .header.sub .inner img {
+      width: 200px;
+      height: 200px;
+      margin: auto;
+      margin-top: 15px; }
 
 .header.home .inner {
   padding-top: 100px; }
