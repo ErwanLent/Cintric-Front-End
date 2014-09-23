@@ -1,3 +1,7 @@
+var counter = 0;
+var numberOfCards = $('.section.demo ul li').length;
+var isNoneShowing = false;
+
 $('document').ready(function(){
 
     /*=====================================================================================
@@ -26,11 +30,60 @@ $('document').ready(function(){
 	setTimeout(function(){
 		$('.call').removeClass('hidden');
 	}, 1600);
+
+    /*=====================================================================================
+        Card Animation
+    =======================================================================================*/
+
+	var transitionPrefixes = 'transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd';
+
+	// Initial trigger
+	setTimeout(function(){
+		hideCard();
+	}, 2000);
+
+	$('.section.demo ul li').on(transitionPrefixes, function() {
+		console.log(counter);
+
+		if (isNoneShowing)
+		{
+			$('.section.demo ul li').eq(counter).show();
+			setTimeout(function(){
+				$('.section.demo ul li').eq(counter).css('left', '0px');
+				isNoneShowing = false;
+			}, 10);
+		}
+		else
+		{
+			setTimeout(function(){
+				hideCard();
+			}, 3000);
+		}
+	});
 });
 
 /*=====================================================================================
     Functions
 =======================================================================================*/
+
+function hideCard()
+{
+	$('.section.demo ul li').eq(counter).css('left', '-100%');
+
+	if ((counter + 1) >= numberOfCards)
+	{
+		counter = 0;
+	}
+	else
+	{
+		counter++;
+	}
+
+	$('.section.demo ul li').eq(counter).hide();
+	$('.section.demo ul li').eq(counter).css('left', '100%');
+
+	isNoneShowing = true;
+}
 
 function initialize() {
 

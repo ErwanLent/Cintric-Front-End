@@ -243,6 +243,8 @@
 
 .section.demo
 {
+    min-height: 950px;
+
     h1
     {
         margin-bottom: 50px;
@@ -251,13 +253,18 @@
     ul
     {
         list-style: none;
+        min-width: 1180px;
         min-height: 665px;
+        position: absolute;
+        overflow: hidden;
+        padding: 0;
 
         li
         {
             position: absolute;
             width: 100%;
             max-width: 1180px;
+            left: 0px;
         }
     }
 

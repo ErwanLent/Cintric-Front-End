@@ -2567,38 +2567,45 @@ h1, h2, h3, h4, h5, h6 {
     width: 80%;
     margin: 20px auto 20px auto; }
 
-.section.demo h1 {
-  margin-bottom: 50px; }
-.section.demo ul {
-  list-style: none;
-  min-height: 665px; }
-  .section.demo ul li {
+.section.demo {
+  min-height: 950px; }
+  .section.demo h1 {
+    margin-bottom: 50px; }
+  .section.demo ul {
+    list-style: none;
+    min-width: 1180px;
+    min-height: 665px;
     position: absolute;
-    width: 100%;
-    max-width: 1180px; }
-.section.demo .card {
-  background-image: url("/img/coffee-shop.jpg");
-  background-position: center;
-  background-size: cover;
-  margin-bottom: 100px;
-  border-radius: 10px; }
-  .section.demo .card .overlay {
-    min-height: 565px;
-    background-color: rgba(207, 0, 15, 0.7);
+    overflow: hidden;
+    padding: 0; }
+    .section.demo ul li {
+      position: absolute;
+      width: 100%;
+      max-width: 1180px;
+      left: 0px; }
+  .section.demo .card {
+    background-image: url("/img/coffee-shop.jpg");
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 100px;
     border-radius: 10px; }
-    .section.demo .card .overlay .center {
-      padding-top: 85px; }
-      .section.demo .card .overlay .center .description {
-        width: 600px;
-        float: left; }
-        .section.demo .card .overlay .center .description h1 {
-          color: white;
-          padding-top: 0px; }
-        .section.demo .card .overlay .center .description p {
-          text-align: justify;
-          color: white; }
-      .section.demo .card .overlay .center img {
-        width: 200px; }
+    .section.demo .card .overlay {
+      min-height: 565px;
+      background-color: rgba(207, 0, 15, 0.7);
+      border-radius: 10px; }
+      .section.demo .card .overlay .center {
+        padding-top: 85px; }
+        .section.demo .card .overlay .center .description {
+          width: 600px;
+          float: left; }
+          .section.demo .card .overlay .center .description h1 {
+            color: white;
+            padding-top: 0px; }
+          .section.demo .card .overlay .center .description p {
+            text-align: justify;
+            color: white; }
+        .section.demo .card .overlay .center img {
+          width: 200px; }
 
 .section.analytics {
   min-height: 980px;
