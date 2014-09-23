@@ -20,6 +20,15 @@
     transition: all ease 0.3s;
 }
 
+.slide
+{
+    -webkit-transition: left 500ms ease-in-out;
+    -moz-transition: left 500ms ease-in-out;
+    -o-transition: left 500ms ease-in-out;
+    -ms-transition: left 500ms ease-in-out;
+    transition: left 500ms ease-in-out;
+}
+
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }

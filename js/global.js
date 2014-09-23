@@ -22,7 +22,7 @@ $(document).ready(function(){
 		if ((currentScrollLocation >= navBarTopPosition) && !isNavigationStuck)
 		{
 			$('.navigation').addClass('fixed');
-			$('.section.products').css('margin-top', ($('.navigation').height()) + 'px');
+			//$('.section.products').css('margin-top', ($('.navigation').height()) + 'px');
 
 			if ($(window).width() > 815)
 			{
@@ -35,7 +35,7 @@ $(document).ready(function(){
 		else if ((currentScrollLocation < navBarTopPosition) && isNavigationStuck)
 		{
 			$('.navigation').removeClass('fixed');
-			$('.section.products').css('margin-top', '0px');
+			//$('.section.products').css('margin-top', '0px');
 			$('.full-logo').fadeOut();
 
 			isLogoShowing = false;

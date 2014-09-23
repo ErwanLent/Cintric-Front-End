@@ -11,6 +11,15 @@
     z-index: 1;
 }
 
+#map-canvas
+{
+    background-color:#fff !important;
+    position: absolute;
+    width: 100%;
+    height: 525px;
+    z-index: 0;
+}
+
 .section-header
 {
     font-family: 'weblysleek_uilight';
@@ -26,8 +35,8 @@
     font-family: weblysleek_uisemilight;
     font-weight: 600;
     font-size: 18px;
-    background-color: $button-background-color;
-    color: $font-header-color;
+    background-color: $light-blue;
+    color: white;
     width: 200px;
     border-radius: 7px;
     padding: 7px 0px;
@@ -38,8 +47,8 @@
 
 .button:hover
 {
-    color: white;
-    background-color: $light-blue;
+    color: $font-header-color;
+    background-color: $button-background-color;
 }
 
 .overlay
@@ -113,7 +122,7 @@
     .inner
     {
         padding-top: 100px;
-        
+
         img
         {
             width: 200px;
@@ -130,6 +139,12 @@
     {
         padding-top: 100px;
     }
+
+    .overlay
+    {
+        position: absolute;
+        height: 500px;
+    }
 }
 
 .navigation
@@ -137,6 +152,9 @@
     height: 70px;
     border-bottom: 1px solid #ecf0f1;
     z-index: 1000;
+    position: absolute;
+    width: 100%;
+    background-color: white;
 
     .full-logo
     {
@@ -225,29 +243,68 @@
 
 .section.demo
 {
-    min-height: 500px;
-
-    .marvel-device
+    h1
     {
-        width: 230px;
-        height: 408px;
-        margin: 30px;
+        margin-bottom: 50px;
+    }
+
+    ul
+    {
+        list-style: none;
+        min-height: 665px;
+
+        li
+        {
+            position: absolute;
+            width: 100%;
+            max-width: 1180px;
+        }
+    }
+
+    .card
+    {
+        background-image: url('/img/coffee-shop.jpg');
+        background-position: center;
+        background-size: cover;
+        //background-attachment: fixed;
         margin-bottom: 100px;
-    }
+        border-radius: 10px;
 
-    .marvel-device.landscape
-    {
-        width: 408px;
-        height: 230px;
-    }
+        .overlay
+        {
+            min-height: 565px;
+            background-color: rgba(207, 0, 15,0.7);
+            border-radius: 10px;
 
-    .screen
-    {
-        overflow-y: hidden;
-        overflow-x: hidden;
-        background-color: white;
-    }
+            .center
+            {
+                padding-top: 85px;
 
+                .description
+                {
+                    width: 600px;
+                    float: left;
+
+                    h1
+                    {
+                        color: white;
+                        padding-top: 0px;
+                    }
+
+                    p
+                    {
+                        text-align: justify;
+                        color: white;
+                    }
+                }
+
+                img
+                {
+                    width: 200px;
+                }
+            }  
+        }
+    }
 }
 
 .section.analytics
@@ -277,6 +334,35 @@
         height: 588px;
         margin: auto;
         margin: 50px auto 100px auto;
+    }
+}
+
+.explanation
+{
+    min-height: 550px;
+    padding-top: 100px;
+
+    img
+    {
+        max-width: 515px;
+        width: 100%;
+        padding-bottom: 100px;
+        padding-top: 50px;
+        float: left;
+        margin-top: -30px;
+    }
+
+    .description
+    {
+        float: right;
+        max-width: 550px;
+        text-align: justify;
+        margin-top: -30px;
+
+        p
+        {
+            text-align: justify;
+        }
     }
 }
 
@@ -315,15 +401,6 @@
 {
     min-height: 500px;
     background-color: white;
-    background-image: url('/img/logo.svg');
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-
-    .overlay
-    {
-        background-color: rgba(255,255,255,.7);
-    }
 
     .product-list
     {

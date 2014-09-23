@@ -10,7 +10,6 @@
         <link rel="icon" type="image/png" href="/img/logo.png">
         <link rel="stylesheet" href="/css/normalize.min.css">
         <link rel="stylesheet" href="/css/animate.min.css">
-        <link rel="stylesheet" href="/css/device.min.css">
         <link rel="stylesheet" href="/css/main.min.css">
         <script src="/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
@@ -19,7 +18,9 @@
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
+        <div id="map-canvas"></div>
         <header class="header home">
+            <div class="overlay"></div>
             <div class="inner center">
                 <div class="logo-content">
                     <img src="/img/logo.png" alt="logo" class="animated fadeInDownBig logo"/>
@@ -27,118 +28,82 @@
                 </div>
                 <div class="call animated fadeInUp hidden">
                     <h3>
-                        Cintric connects businesses to consumers through
-                        its location-based communication platform.
+                    Cintric connects businesses to consumers through
+                    its location-based communication platform.
                     </h3>
                     <div class="button ease">Find Out More</div>
                 </div>
             </div>
         </header>
         <nav class="navigation">
-        <div class="inner">
-            <div class="full-logo"></div>
-            <ul class="page-links">
-                <li>
-                    <a href="/team">Team</a>
-                </li>
-                <li>
-                    <a href="/contact">Contact</a>
-                </li>
-                <li>
-                    <a href="/">Early Access</a>
-                </li>
-            </ul>
-        </nav>
+            <div class="inner">
+                <div class="full-logo"></div>
+                <ul class="page-links">
+                    <li>
+                        <a href="/team">Team</a>
+                    </li>
+                    <li>
+                        <a href="/contact">Contact</a>
+                    </li>
+                    <li>
+                        <a href="/contact">Other Products</a>
+                    </li>
+                    <li>
+                        <a href="/">Early Access</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
         <section class="section products">
-        <div class="overlay">
             <div class="inner center">
-                <h1>
-                    Cintric Features
-                </h1>
-                <div class="product-list">
-                    <div class="product">
-                        <img src="/img/alert.png" alt="Alert">
-                        <p style="padding-top: 2px;">Push alerts to customers at your location and keep them informed.</p>
-                    </div>
-                    <div class="product">
-                        <img src="/img/help.png" alt="Help">
-                        <p>Connect customers to staff, bringing support right to their mobile device.</p>
-                    </div>
-                    <div class="product">
-                        <img src="/img/talk.png" alt="Talk">
-                        <p>Group customer communication for a shared sense of community.</p>
+                <div class="explanation">
+                    <img src="/img/cintric-explanation.svg" alt="Explanation">
+                    <div class="description">
+                        <h1>
+                        What Is Cintric?
+                        </h1>
+                        <p>
+                        Cintric is a universal platform that allows businesses to contact consumers within their location. Simply set the location and boundary for your business, then send a message to consumers through our responsive web interface. Cintric even provides rich analytics on who is in your location. It’s that simple, and can be set up in minutes.
+                        </p>
                     </div>
                 </div>
-            </div>
             </div>
         </section>
         <section class="section demo">
             <div class="inner">
                 <h1>
-                    Mobile support for the real world
+                Practical Applications
                 </h1>
-                <p>
-                    Your customers are on mobile even when they’re in your physical location. Bring customer support closer to them than ever with Cintric’s real-time communication and analytics.
-                </p>
-                <div class="center">
-                    <div class="marvel-device nexus5">
-                        <div class="top-bar"></div>
-                        <div class="sleep"></div>
-                        <div class="volume"></div>
-                        <div class="camera"></div>
-                        <div class="screen">
-                            <div id="live-chat">
-                                <header class="clearfix">
-                                    <h4>Camelia Moher</h4>
-                                    <span class="chat-message-counter">3</span>
-                                </header>
-                                <div class="chat">
-                                    <div class="chat-history" id="messages">
-                                        <div class="chat-message clearfix">
-                                            <img src="/img/camelia.jpg" alt="" width="32" height="32">
-                                            <div class="chat-message-content clearfix">
-                                                <h5>Camelia Moher</h5>
-                                                <p>Hey, I can’t find anyone to help me. Does the medical tent have aspirin?</p>
-                                            </div>
-                                        </div>
-                                        <hr>
+                <ul>
+                    <li class="slide">
+                        <div class="card center">
+                            <div class="overlay">
+                                <div class="center">
+                                    <div class="description">
+                                        <h1>Coffee Shop</h1>
+                                        <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque sint deserunt natus soluta sit atque dolorum dolorem voluptate est incidunt cum repudiandae laborum deleniti, nulla fuga veniam tenetur optio nisi.
+                                        </p>
                                     </div>
+                                    <img src="/img/coffee.svg" alt="Coffee">
                                 </div>
-                            </div>
-                            <div id="chat-entry" style="display: none;">
-                                <div class="chat-message clearfix">
-                                    <img src="/img/empty.jpg" width="32" height="32">
-                                    <div class="chat-message-content clearfix">
-                                        <span class="chat-time">%TIME%</span>
-                                        <h5>%NAME%</h5>
-                                        <p>%MESSAGE%</p>
-                                    </div>
-                                </div>
-                                <hr />
                             </div>
                         </div>
-                    </div>   
-                </div>
-            </div>
-        </section>
-        <section class="separator">
-            <div class="inner center">
-                <h1>
-                    Integrate Our SDKs
-                </h1>
-                <ul class="icons">
-                    <li>
-                        <i class="fa fa-apple"></i>
                     </li>
-                    <li>
-                        <i class="fa fa-android"></i>
-                    </li>
-                    <li>
-                        <i class="icon-html"></i>
-                    </li>
-                    <li>
-                        <i class="icon-php"></i>
+                    <li style="display: none;">
+                        <div class="card center">
+                            <div class="overlay">
+                                <div class="center">
+                                    <div class="description">
+                                        <h1>Coffee Shop</h1>
+                                        <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque sint deserunt natus soluta sit atque dolorum dolorem voluptate est incidunt cum repudiandae laborum deleniti, nulla fuga veniam tenetur optio nisi.
+                                        </p>
+                                    </div>
+                                    <img src="/img/coffee.svg" alt="Coffee">
+                                </div>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -149,20 +114,20 @@
                 <div class="overlay">
                     <div class="inner">
                         <h1>
-                            Realtime analytics for your physical location
+                        Realtime analytics for your physical location
                         </h1>
                         <p>
-                            Cintric Analytics brings you accurate information and analysis on who your customers are and how well they’re being supported.
+                        Cintric Analytics brings you accurate information and analysis on who your customers are and how well they’re being supported.
                         </p>
                         <div class="macbook"></div>
                     </div>
-                </div>  
+                </div>
             </div>
         </section>
         <section class="section early-access">
             <div class="inner">
                 <h1>
-                    Get Early Access Now
+                Get Early Access Now
                 </h1>
                 <div class="email-form center">
                     <input type="text" name="email" placeholder="Enter your email...">
@@ -170,16 +135,6 @@
                 </div>
             </div>
         </section>
-<!--         <footer>
-            <div class="inner">
-                contact@cintric.com
-                <div class="right">
-                    © 2014 Cintric, LLC.
-                </div>
-                
-            </div>
-        </footer> -->
-
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
         <script src="/js/chart.min.js"></script>

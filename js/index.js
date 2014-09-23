@@ -3,9 +3,9 @@ $('document').ready(function(){
     /*=====================================================================================
         Header Animation
     =======================================================================================*/
-
+    loadScript();
     loadChart();
-	
+
 	setTimeout(function(){
 		$('.logo').removeClass('animated');
 		$('.logo').removeClass('fadeInDownBig');
@@ -26,74 +26,35 @@ $('document').ready(function(){
 	setTimeout(function(){
 		$('.call').removeClass('hidden');
 	}, 1600);
-
-    /*=====================================================================================
-        Messenger Animation
-    =======================================================================================*/
-
-	var messages = 
-	[
-		"Hey, I can’t find anyone to help me. Does the medical tent have aspirin?",
-		"Hi Camelia, the medical tent has aspirin and is location by the South entrance. Should I notify staff that you need medical assistance?", 
-		"Wow, thanks! And I’ll be alright. Just a headache :)",
-		"You’re welcome! Feel better, and let us know if there’s anything else we can do!"
-	];
-
-	var messageCounter = 1;
-
-	setInterval(function(){
-
-		if (messageCounter >= messages.length)
-		{
-			messageCounter = 0;
-		}
-
-		var messageEntry = generateListEntry(messageCounter, messages[messageCounter]);
-		messageCounter++;
-
-		insertListEntry(messageEntry, true);
-
-	}, 3000);
 });
 
+/*=====================================================================================
+    Functions
+=======================================================================================*/
 
-function generateListEntry(messageCounter, message)
-{
-	var listEntry = $('#chat-entry').html();
-	var image;
+function initialize() {
 
-	switch((messageCounter + 1) % 2)
-	{
-		case 1:
-			name = "Camelia Moher";
-			image = "camelia.jpg";
-			break;
-		case 0:
-			name = "Festival Staff";
-			image = "bmf.jpg";
-			break;
-	}
+	$.get('http://ip-api.com/json/').done(function(data){
+		var mapOptions = {
+	    	zoom: 13,
+			scrollwheel: false, 
+			mapTypeControl: false, 
+			streetViewControl: false, 
+			disableDefaultUI: true,
+	    	center: new google.maps.LatLng(data["lat"], data["lon"])
+	  	};
 
-	listEntry = listEntry.replace("%NAME%", name);
-	listEntry = listEntry.replace("%MESSAGE%", message);
-	listEntry = listEntry.replace("empty.jpg", image);
-
-	return listEntry;
+	  	var map = new google.maps.Map(document.getElementById('map-canvas'),
+	      mapOptions);
+	});
 }
 
-function insertListEntry(entry, isAnimated)
-{
-	$('.chat-history').append(entry);
-
-	var lastEntryTopPosition = $($('.screen').children()[$('.screen').children().length - 1]).position().top;
-
-	if (isAnimated)
-	{
-		$('.screen').stop();
-		$('.screen').animate({
-			scrollTop: lastEntryTopPosition + $('.screen').scrollTop()
-	    }, 2000);
-	}
+function loadScript() {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&' +
+      'callback=initialize';
+  document.body.appendChild(script);
 }
 
 function loadChart()

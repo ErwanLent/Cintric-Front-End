@@ -2369,6 +2369,13 @@ h1, h2, h3, h4, h5, h6 {
   -ms-transition: all ease 0.3s;
   transition: all ease 0.3s; }
 
+.slide {
+  -webkit-transition: left 500ms ease-in-out;
+  -moz-transition: left 500ms ease-in-out;
+  -o-transition: left 500ms ease-in-out;
+  -ms-transition: left 500ms ease-in-out;
+  transition: left 500ms ease-in-out; }
+
 @keyframes fadein {
   from {
     opacity: 0; }
@@ -2416,6 +2423,13 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   z-index: 1; }
 
+#map-canvas {
+  background-color: #fff !important;
+  position: absolute;
+  width: 100%;
+  height: 525px;
+  z-index: 0; }
+
 .section-header {
   font-family: 'weblysleek_uilight';
   text-align: center;
@@ -2428,8 +2442,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: weblysleek_uisemilight;
   font-weight: 600;
   font-size: 18px;
-  background-color: #f1f1f1;
-  color: #565656;
+  background-color: #2980b9;
+  color: white;
   width: 200px;
   border-radius: 7px;
   padding: 7px 0px;
@@ -2438,8 +2452,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 175px; }
 
 .button:hover {
-  color: white;
-  background-color: #2980b9; }
+  color: #565656;
+  background-color: #f1f1f1; }
 
 .overlay {
   width: 100%;
@@ -2488,11 +2502,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .header.home .inner {
   padding-top: 100px; }
+.header.home .overlay {
+  position: absolute;
+  height: 500px; }
 
 .navigation {
   height: 70px;
   border-bottom: 1px solid #ecf0f1;
-  z-index: 1000; }
+  z-index: 1000;
+  position: absolute;
+  width: 100%;
+  background-color: white; }
   .navigation .full-logo {
     display: none;
     float: left;
@@ -2547,20 +2567,38 @@ h1, h2, h3, h4, h5, h6 {
     width: 80%;
     margin: 20px auto 20px auto; }
 
-.section.demo {
-  min-height: 500px; }
-  .section.demo .marvel-device {
-    width: 230px;
-    height: 408px;
-    margin: 30px;
-    margin-bottom: 100px; }
-  .section.demo .marvel-device.landscape {
-    width: 408px;
-    height: 230px; }
-  .section.demo .screen {
-    overflow-y: hidden;
-    overflow-x: hidden;
-    background-color: white; }
+.section.demo h1 {
+  margin-bottom: 50px; }
+.section.demo ul {
+  list-style: none;
+  min-height: 665px; }
+  .section.demo ul li {
+    position: absolute;
+    width: 100%;
+    max-width: 1180px; }
+.section.demo .card {
+  background-image: url("/img/coffee-shop.jpg");
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 100px;
+  border-radius: 10px; }
+  .section.demo .card .overlay {
+    min-height: 565px;
+    background-color: rgba(207, 0, 15, 0.7);
+    border-radius: 10px; }
+    .section.demo .card .overlay .center {
+      padding-top: 85px; }
+      .section.demo .card .overlay .center .description {
+        width: 600px;
+        float: left; }
+        .section.demo .card .overlay .center .description h1 {
+          color: white;
+          padding-top: 0px; }
+        .section.demo .card .overlay .center .description p {
+          text-align: justify;
+          color: white; }
+      .section.demo .card .overlay .center img {
+        width: 200px; }
 
 .section.analytics {
   min-height: 980px;
@@ -2580,6 +2618,24 @@ h1, h2, h3, h4, h5, h6 {
     height: 588px;
     margin: auto;
     margin: 50px auto 100px auto; }
+
+.explanation {
+  min-height: 550px;
+  padding-top: 100px; }
+  .explanation img {
+    max-width: 515px;
+    width: 100%;
+    padding-bottom: 100px;
+    padding-top: 50px;
+    float: left;
+    margin-top: -30px; }
+  .explanation .description {
+    float: right;
+    max-width: 550px;
+    text-align: justify;
+    margin-top: -30px; }
+    .explanation .description p {
+      text-align: justify; }
 
 .separator {
   background-color: #2980b9;
@@ -2603,13 +2659,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .section.products {
   min-height: 500px;
-  background-color: white;
-  background-image: url("/img/logo.svg");
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed; }
-  .section.products .overlay {
-    background-color: rgba(255, 255, 255, 0.7); }
+  background-color: white; }
   .section.products .product-list {
     margin-top: 50px;
     margin-bottom: 100px; }
@@ -2796,6 +2846,15 @@ footer {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+@media screen and (max-width: 1100px) {
+  .explanation img {
+    float: none; }
+  .explanation .description {
+    float: none;
+    padding-bottom: 100px;
+    margin: auto; }
+  .explanation h1 {
+    padding-top: 0px; } }
 @media screen and (max-width: 815px) {
   .navigation .inner .full-logo {
     display: none; }
