@@ -5,10 +5,10 @@
     -o-transition-duration: 0.8s;
     transition-duration: 0.8s;
 
-    -webkit-transform: rotate(360deg); 
-    -moz-transform: rotate(360deg); 
-    -o-transform: rotate(360deg);
-    -ms-transform: rotate(360deg); 
+    -webkit-transform: rotate(360deg) translate3d(0, 0, 0); 
+    -moz-transform: rotate(360deg) translate3d(0, 0, 0); 
+    -o-transform: rotate(360deg) translate3d(0, 0, 0);
+    -ms-transform: rotate(360deg) translate3d(0, 0, 0); 
 }
 
 .ease
@@ -22,11 +22,17 @@
 
 .slide
 {
-    -webkit-transition: left 500ms ease-in-out;
-    -moz-transition: left 500ms ease-in-out;
-    -o-transition: left 500ms ease-in-out;
-    -ms-transition: left 500ms ease-in-out;
-    transition: left 500ms ease-in-out;
+    -webkit-transform:translate3d(0, 0, 0);
+    -moz-transform:translate3d(0, 0, 0);
+    -ms-transform:translate3d(0, 0, 0);
+    -o-transform:translate3d(0, 0, 0);
+    transform:translate3d(0, 0, 0);
+
+    -webkit-transition: left 500ms ease;
+    -moz-transition: left 500ms ease;
+    -o-transition: left 500ms ease;
+    -ms-transition: left 500ms ease;
+    transition: left 500ms ease;
 }
 
 @keyframes fadein {

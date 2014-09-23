@@ -2357,10 +2357,10 @@ h1, h2, h3, h4, h5, h6 {
   -moz-transition-duration: 0.8s;
   -o-transition-duration: 0.8s;
   transition-duration: 0.8s;
-  -webkit-transform: rotate(360deg);
-  -moz-transform: rotate(360deg);
-  -o-transform: rotate(360deg);
-  -ms-transform: rotate(360deg); }
+  -webkit-transform: rotate(360deg) translate3d(0, 0, 0);
+  -moz-transform: rotate(360deg) translate3d(0, 0, 0);
+  -o-transform: rotate(360deg) translate3d(0, 0, 0);
+  -ms-transform: rotate(360deg) translate3d(0, 0, 0); }
 
 .ease {
   -webkit-transition: all ease 0.3s;
@@ -2370,11 +2370,16 @@ h1, h2, h3, h4, h5, h6 {
   transition: all ease 0.3s; }
 
 .slide {
-  -webkit-transition: left 500ms ease-in-out;
-  -moz-transition: left 500ms ease-in-out;
-  -o-transition: left 500ms ease-in-out;
-  -ms-transition: left 500ms ease-in-out;
-  transition: left 500ms ease-in-out; }
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: left 500ms ease;
+  -moz-transition: left 500ms ease;
+  -o-transition: left 500ms ease;
+  -ms-transition: left 500ms ease;
+  transition: left 500ms ease; }
 
 @keyframes fadein {
   from {
@@ -2491,14 +2496,17 @@ h1, h2, h3, h4, h5, h6 {
     padding: 5px; }
 
 .header.sub {
-  height: 300px; }
-  .header.sub .inner {
-    padding-top: 100px; }
-    .header.sub .inner img {
-      width: 200px;
-      height: 200px;
-      margin: auto;
-      margin-top: 15px; }
+  min-height: 300px; }
+  .header.sub .inner h1 {
+    font-size: 80px; }
+  .header.sub .inner img {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    margin-top: 25px; }
+
+.team .section-header {
+  padding-top: 100px; }
 
 .header.home .inner {
   padding-top: 100px; }
@@ -2583,28 +2591,40 @@ h1, h2, h3, h4, h5, h6 {
       width: 100%;
       max-width: 1180px;
       left: 0px; }
-  .section.demo .card {
-    background-image: url("/img/coffee-shop.jpg");
+  .section.demo .slide .coffee {
+    background-image: url("/img/coffee-shop.jpg"); }
+    .section.demo .slide .coffee .overlay {
+      background-color: rgba(25, 181, 254, 0.9); }
+  .section.demo .slide .concert {
+    background-image: url("/img/concert.jpg"); }
+    .section.demo .slide .concert .overlay {
+      background-color: rgba(25, 181, 254, 0.9); }
+  .section.demo .slide .emergency {
+    background-image: url("/img/emergency.jpg"); }
+    .section.demo .slide .emergency .overlay {
+      background-color: rgba(25, 181, 254, 0.9); }
+  .section.demo .slide .card {
     background-position: center;
     background-size: cover;
     margin-bottom: 100px;
     border-radius: 10px; }
-    .section.demo .card .overlay {
+    .section.demo .slide .card .overlay {
       min-height: 565px;
-      background-color: rgba(207, 0, 15, 0.7);
-      border-radius: 10px; }
-      .section.demo .card .overlay .center {
+      border-radius: 8px; }
+      .section.demo .slide .card .overlay .center {
         padding-top: 85px; }
-        .section.demo .card .overlay .center .description {
-          width: 600px;
-          float: left; }
-          .section.demo .card .overlay .center .description h1 {
+        .section.demo .slide .card .overlay .center .description {
+          width: 400px;
+          float: left;
+          margin-left: 230px; }
+          .section.demo .slide .card .overlay .center .description h1 {
             color: white;
             padding-top: 0px; }
-          .section.demo .card .overlay .center .description p {
+          .section.demo .slide .card .overlay .center .description p {
             text-align: justify;
-            color: white; }
-        .section.demo .card .overlay .center img {
+            color: white;
+            width: 400px; }
+        .section.demo .slide .card .overlay .center img {
           width: 200px; }
 
 .section.analytics {

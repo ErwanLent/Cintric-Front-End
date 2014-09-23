@@ -13,7 +13,7 @@ $('document').ready(function(){
 	setTimeout(function(){
 		$('.logo').removeClass('animated');
 		$('.logo').removeClass('fadeInDownBig');
-	}, 1000);
+	}, 1200);
 
 	setTimeout(function(){
 		$('.logo').addClass('rotate');
@@ -25,11 +25,11 @@ $('document').ready(function(){
 		}
 
 		$('.logo-text').removeClass('hidden');
-	}, 1050);
+	}, 1250);
 
 	setTimeout(function(){
 		$('.call').removeClass('hidden');
-	}, 1600);
+	}, 1800);
 
     /*=====================================================================================
         Card Animation
@@ -43,8 +43,6 @@ $('document').ready(function(){
 	}, 2000);
 
 	$('.section.demo ul li').on(transitionPrefixes, function() {
-		console.log(counter);
-
 		if (isNoneShowing)
 		{
 			$('.section.demo ul li').eq(counter).show();

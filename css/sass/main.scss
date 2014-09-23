@@ -117,19 +117,30 @@
 
 .header.sub
 {
-    height: 300px;
+    min-height: 300px;
 
     .inner
     {
-        padding-top: 100px;
+        h1
+        {
+            font-size: 80px;
+        }
 
         img
         {
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
             margin: auto;
-            margin-top: 15px;
+            margin-top: 25px;
         }
+    }
+}
+
+.team
+{
+    .section-header
+    {
+        padding-top: 100px;
     }
 }
 
@@ -268,48 +279,81 @@
         }
     }
 
-    .card
+    .slide
     {
-        background-image: url('/img/coffee-shop.jpg');
-        background-position: center;
-        background-size: cover;
-        //background-attachment: fixed;
-        margin-bottom: 100px;
-        border-radius: 10px;
-
-        .overlay
+        .coffee
         {
-            min-height: 565px;
-            background-color: rgba(207, 0, 15,0.7);
+            background-image: url('/img/coffee-shop.jpg');
+
+            .overlay
+            {
+                background-color: rgba(25, 181, 254, 0.9)
+            }
+        }
+
+        .concert
+        {
+            background-image: url('/img/concert.jpg');
+
+            .overlay
+            {
+                background-color: rgba(25, 181, 254, 0.9)
+            }
+        }
+
+        .emergency
+        {
+            background-image: url('/img/emergency.jpg');
+
+            .overlay
+            {
+                background-color: rgba(25, 181, 254, 0.9)
+            }
+        }
+
+        .card
+        {
+            background-position: center;
+            background-size: cover;
+            //background-attachment: fixed;
+            margin-bottom: 100px;
             border-radius: 10px;
 
-            .center
+            .overlay
             {
-                padding-top: 85px;
+                min-height: 565px;
+                border-radius: 8px;
 
-                .description
+                .center
                 {
-                    width: 600px;
-                    float: left;
+                    padding-top: 85px;
 
-                    h1
+                    .description
                     {
-                        color: white;
-                        padding-top: 0px;
+                        width: 400px;
+                        float: left;
+                        margin-left: 230px;
+
+                        h1
+                        {
+                            color: white;
+                            padding-top: 0px;
+                        }
+
+                        p
+                        {
+                            text-align: justify;
+                            color: white;
+                            width: 400px;
+                        }
                     }
 
-                    p
+                    img
                     {
-                        text-align: justify;
-                        color: white;
+                        width: 200px;
                     }
-                }
-
-                img
-                {
-                    width: 200px;
-                }
-            }  
+                }  
+            }
         }
     }
 }
