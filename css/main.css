@@ -2569,8 +2569,8 @@ h1, h2, h3, h4, h5, h6 {
         color: #2c3e50;
         text-decoration: none; }
     .navigation .page-links li:hover a {
-      color: #3498db;
-      border-bottom: 1px dotted #3498db; }
+      color: #85c1c9;
+      border-bottom: 1px dotted #85c1c9; }
 
 .navigation.fixed {
   position: fixed;
@@ -2605,7 +2605,8 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 50px; }
   .section.demo ul {
     list-style: none;
-    min-width: 1180px;
+    width: 100%;
+    max-width: 1180px;
     min-height: 565px;
     position: absolute;
     overflow: hidden;
@@ -2762,7 +2763,7 @@ h1, h2, h3, h4, h5, h6 {
       color: white;
       padding: 10px; }
     .section.early-access .email-form button:hover {
-      background-color: #2c3e50; }
+      background-color: #76517c; }
 
 .person {
   padding: 50px;

@@ -239,9 +239,8 @@
         {
             a
             {
-                $hover-color: #3498db;
-                color: $hover-color;
-                border-bottom:1px dotted $hover-color;
+                color: $light-blue;
+                border-bottom:1px dotted $light-blue;
             }
         }
     }
@@ -297,7 +296,8 @@
     ul
     {
         list-style: none;
-        min-width: 1180px;
+        width: 100%;
+        max-width: 1180px;
         min-height: 565px;
         position: absolute;
         overflow: hidden;
@@ -523,7 +523,7 @@
     {
         margin-top: 70px;
         margin-right: 5px;
-            margin-left: 5px;
+        margin-left: 5px;
 
         input
         {
@@ -562,7 +562,7 @@
 
         button:hover
         {
-            background-color: $blue-header-color;
+            background-color: $purple;
         }
     }
 }

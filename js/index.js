@@ -31,6 +31,12 @@ $('document').ready(function(){
 		$('.call').removeClass('hidden');
 	}, 1800);
 
+	$('#find-out, .early').click(function(){
+		$('html, body').animate({
+    		scrollTop: $(".early-access").offset().top
+ 		}, 2000);
+	});
+
     /*=====================================================================================
         Card Animation
     =======================================================================================*/
