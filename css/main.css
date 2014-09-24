@@ -2444,10 +2444,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 50px 0px; }
 
 .button {
-  font-family: weblysleek_uisemilight;
+  font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
   font-weight: 600;
   font-size: 18px;
-  background-color: #2980b9;
+  background-color: #ff9863;
   color: white;
   width: 200px;
   border-radius: 7px;
@@ -2456,9 +2456,22 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   width: 175px; }
 
+#curve-top {
+  margin-bottom: -105px; }
+  #curve-top path {
+    fill: white;
+    stroke: white; }
+
+#curve-bottom {
+  margin-bottom: -83px;
+  z-index: 0; }
+  #curve-bottom path {
+    fill: #85c1c9;
+    stroke: #85c1c9; }
+
 .button:hover {
-  color: #565656;
-  background-color: #f1f1f1; }
+  color: white;
+  background-color: #E68959; }
 
 .overlay {
   width: 100%;
@@ -2471,7 +2484,7 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   z-index: 100; }
   .header .overlay {
-    background-color: rgba(255, 255, 255, 0.8); }
+    background-color: rgba(255, 255, 255, 0.6); }
   .header .inner .logo-text {
     color: #565656;
     font-family: allerbold;
@@ -2496,17 +2509,23 @@ h1, h2, h3, h4, h5, h6 {
     padding: 5px; }
 
 .header.sub {
-  min-height: 300px; }
-  .header.sub .inner h1 {
-    font-size: 80px; }
-  .header.sub .inner img {
-    width: 150px;
-    height: 150px;
-    margin: auto;
-    margin-top: 25px; }
+  min-height: 300px;
+  background-image: url("/img/concert.jpg");
+  background-position: center;
+  background-size: cover; }
+  .header.sub .overlay {
+    height: 300px; }
+    .header.sub .overlay .inner h1 {
+      font-size: 80px; }
+    .header.sub .overlay .inner img {
+      width: 150px;
+      height: 150px;
+      margin: auto;
+      margin-top: 25px; }
 
 .team .section-header {
-  padding-top: 100px; }
+  padding-top: 100px;
+  padding-bottom: 25px; }
 
 .header.home .inner {
   padding-top: 100px; }
@@ -2576,16 +2595,18 @@ h1, h2, h3, h4, h5, h6 {
     margin: 20px auto 20px auto; }
 
 .section.demo {
-  min-height: 950px; }
+  min-height: 950px;
+  background-color: white; }
   .section.demo h1 {
     margin-bottom: 50px; }
   .section.demo ul {
     list-style: none;
     min-width: 1180px;
-    min-height: 665px;
+    min-height: 565px;
     position: absolute;
     overflow: hidden;
-    padding: 0; }
+    padding: 0;
+    box-shadow: 0 0 8px #000; }
     .section.demo ul li {
       position: absolute;
       width: 100%;
@@ -2594,23 +2615,21 @@ h1, h2, h3, h4, h5, h6 {
   .section.demo .slide .coffee {
     background-image: url("/img/coffee-shop.jpg"); }
     .section.demo .slide .coffee .overlay {
-      background-color: rgba(25, 181, 254, 0.9); }
+      background-color: rgba(133, 193, 201, 0.9); }
   .section.demo .slide .concert {
     background-image: url("/img/concert.jpg"); }
     .section.demo .slide .concert .overlay {
-      background-color: rgba(25, 181, 254, 0.9); }
+      background-color: rgba(254, 80, 103, 0.9); }
   .section.demo .slide .emergency {
     background-image: url("/img/emergency.jpg"); }
     .section.demo .slide .emergency .overlay {
-      background-color: rgba(25, 181, 254, 0.9); }
+      background-color: rgba(255, 152, 99, 0.9); }
   .section.demo .slide .card {
     background-position: center;
     background-size: cover;
-    margin-bottom: 100px;
-    border-radius: 10px; }
+    margin-bottom: 100px; }
     .section.demo .slide .card .overlay {
-      min-height: 565px;
-      border-radius: 8px; }
+      min-height: 565px; }
       .section.demo .slide .card .overlay .center {
         padding-top: 85px; }
         .section.demo .slide .card .overlay .center .description {
@@ -2618,6 +2637,7 @@ h1, h2, h3, h4, h5, h6 {
           float: left;
           margin-left: 230px; }
           .section.demo .slide .card .overlay .center .description h1 {
+            font-family: allerbold;
             color: white;
             padding-top: 0px; }
           .section.demo .slide .card .overlay .center .description p {
@@ -2665,18 +2685,22 @@ h1, h2, h3, h4, h5, h6 {
       text-align: justify; }
 
 .separator {
-  background-color: #2980b9;
-  min-height: 200px; }
+  background-color: #85c1c9;
+  min-height: 265px;
+  padding-top: 28px; }
   .separator h1 {
     color: white;
-    padding-top: 15px;
     font-size: 50px;
     font-weight: 100;
-    font-family: 'weblysleek_uilight'; }
+    font-family: 'weblysleek_uilight';
+    padding-top: 94px; }
   .separator .icons {
     list-style: none;
     padding: 0;
-    margin-bottom: 40px; }
+    margin-bottom: 0;
+    z-index: 1000;
+    position: absolute;
+    width: 1180px; }
     .separator .icons li {
       display: inline-block;
       color: white;
@@ -2717,7 +2741,7 @@ h1, h2, h3, h4, h5, h6 {
       display: block;
       margin: auto;
       outline: 0;
-      border: 1px solid #2980b9; }
+      border: 1px solid #85c1c9; }
     .section.early-access .email-form input:focus {
       outline: 0; }
     .section.early-access .email-form button {
@@ -2727,7 +2751,7 @@ h1, h2, h3, h4, h5, h6 {
       max-width: 400px;
       margin: auto;
       margin-top: 15px;
-      background-color: #2980b9;
+      background-color: #85c1c9;
       outline: 0;
       border: 0;
       color: white;
@@ -2754,9 +2778,10 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 45px; }
     .person .bio p {
       color: #565656;
-      margin-top: 30px; }
+      margin-top: 20px; }
     .person .bio h3 {
-      font-size: 30px;
+      font-size: 35px;
+      font-family: allerbold;
       color: #2c3e50; }
 
 footer {

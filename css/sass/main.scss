@@ -32,10 +32,10 @@
 
 .button
 {
-    font-family: weblysleek_uisemilight;
+    font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
     font-weight: 600;
     font-size: 18px;
-    background-color: $light-blue;
+    background-color: $orange;
     color: white;
     width: 200px;
     border-radius: 7px;
@@ -45,10 +45,33 @@
     width: 175px;
 }
 
+#curve-top
+{
+    margin-bottom: -105px;
+
+    path
+    {
+        fill: white;
+        stroke: white;
+    }
+}
+
+#curve-bottom
+{
+    margin-bottom: -83px;
+    z-index: 0;
+
+    path
+    {
+        fill: #85c1c9;
+        stroke: #85c1c9;
+    }
+}
+
 .button:hover
 {
-    color: $font-header-color;
-    background-color: $button-background-color;
+    color: white;
+    background-color: #E68959;
 }
 
 .overlay
@@ -70,7 +93,7 @@
 
     .overlay
     {
-        background-color: rgba(255, 255, 255, .80);
+        background-color: rgba(255, 255, 255,0.6);
     }
 
     .inner
@@ -118,20 +141,28 @@
 .header.sub
 {
     min-height: 300px;
+    background-image: url('/img/concert.jpg');
+    background-position: center;
+    background-size: cover;
 
-    .inner
+    .overlay
     {
-        h1
-        {
-            font-size: 80px;
-        }
+        height: 300px;
 
-        img
+        .inner
         {
-            width: 150px;
-            height: 150px;
-            margin: auto;
-            margin-top: 25px;
+            h1
+            {
+                font-size: 80px;
+            }
+
+            img
+            {
+                width: 150px;
+                height: 150px;
+                margin: auto;
+                margin-top: 25px;
+            }
         }
     }
 }
@@ -141,6 +172,7 @@
     .section-header
     {
         padding-top: 100px;
+        padding-bottom: 25px;
     }
 }
 
@@ -255,6 +287,7 @@
 .section.demo
 {
     min-height: 950px;
+    background-color: white;
 
     h1
     {
@@ -265,10 +298,11 @@
     {
         list-style: none;
         min-width: 1180px;
-        min-height: 665px;
+        min-height: 565px;
         position: absolute;
         overflow: hidden;
         padding: 0;
+        box-shadow: 0 0 8px #000;
 
         li
         {
@@ -287,7 +321,7 @@
 
             .overlay
             {
-                background-color: rgba(25, 181, 254, 0.9)
+                background-color: rgba(133,193,201, 0.9)
             }
         }
 
@@ -297,7 +331,7 @@
 
             .overlay
             {
-                background-color: rgba(25, 181, 254, 0.9)
+                background-color: rgba(254,80,103, 0.9)
             }
         }
 
@@ -307,7 +341,7 @@
 
             .overlay
             {
-                background-color: rgba(25, 181, 254, 0.9)
+                background-color: rgba(255,152,99, 0.9)
             }
         }
 
@@ -315,14 +349,11 @@
         {
             background-position: center;
             background-size: cover;
-            //background-attachment: fixed;
             margin-bottom: 100px;
-            border-radius: 10px;
 
             .overlay
             {
                 min-height: 565px;
-                border-radius: 8px;
 
                 .center
                 {
@@ -336,6 +367,7 @@
 
                         h1
                         {
+                            font-family: allerbold;
                             color: white;
                             padding-top: 0px;
                         }
@@ -420,22 +452,26 @@
 .separator
 {
     background-color: $light-blue;
-    min-height: 200px;
+    min-height: 265px;
+    padding-top: 28px;
 
     h1
     {
         color: white;
-        padding-top: 15px;
         font-size: 50px;
         font-weight: 100;
         font-family: 'weblysleek_uilight';
+        padding-top: 94px;
     }
 
     .icons
     {
         list-style: none;
         padding: 0;
-        margin-bottom: 40px;
+        margin-bottom: 0;
+        z-index: 1000;
+        position: absolute;
+        width: 1180px;
 
         li
         {
@@ -563,12 +599,13 @@
         p
         {
             color: $font-header-color;
-            margin-top: 30px;
+            margin-top: 20px;
         }
 
         h3
         {
-            font-size: 30px;
+            font-size: 35px;
+            font-family: allerbold;
             color: $blue-header-color;
         }
     }
