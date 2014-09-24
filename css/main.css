@@ -2197,7 +2197,11 @@ html {
   font-size: 1em;
   line-height: 1.4;
   font-family: 'weblysleek_uilight';
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -2457,7 +2461,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 175px; }
 
 #curve-top {
-  margin-bottom: -105px; }
+  margin-bottom: -104px; }
   #curve-top path {
     fill: white;
     stroke: white; }
@@ -2693,14 +2697,15 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 50px;
     font-weight: 100;
     font-family: 'weblysleek_uilight';
-    padding-top: 94px; }
+    padding-top: 75px; }
   .separator .icons {
     list-style: none;
     padding: 0;
     margin-bottom: 0;
     z-index: 1000;
     position: absolute;
-    width: 1180px; }
+    max-width: 1180px;
+    width: 100%; }
     .separator .icons li {
       display: inline-block;
       color: white;
@@ -2930,11 +2935,17 @@ footer {
 @media screen and (max-width: 700px) {
   .section.analytics .macbook {
     height: 400px; } }
+@media screen and (max-width: 670px) {
+  .separator {
+    min-height: 345px; } }
 @media screen and (max-width: 500px) {
   .section.analytics {
     min-height: 800px; }
     .section.analytics .macbook {
       height: 280px; } }
+@media screen and (max-width: 450px) {
+  .separator {
+    min-height: 525px; } }
 @media screen and (max-width: 390px) {
   .section.analytics .macbook {
     height: 210px; } }

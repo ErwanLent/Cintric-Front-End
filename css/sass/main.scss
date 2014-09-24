@@ -47,7 +47,7 @@
 
 #curve-top
 {
-    margin-bottom: -105px;
+    margin-bottom: -104px;
 
     path
     {
@@ -461,7 +461,7 @@
         font-size: 50px;
         font-weight: 100;
         font-family: 'weblysleek_uilight';
-        padding-top: 94px;
+        padding-top: 75px;
     }
 
     .icons
@@ -471,7 +471,8 @@
         margin-bottom: 0;
         z-index: 1000;
         position: absolute;
-        width: 1180px;
+        max-width: 1180px;
+        width: 100%;
 
         li
         {

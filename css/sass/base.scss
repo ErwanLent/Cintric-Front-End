@@ -16,6 +16,11 @@ html {
     line-height: 1.4;
     font-family: 'weblysleek_uilight';
     overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 ::-moz-selection {

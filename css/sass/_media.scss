@@ -90,6 +90,13 @@
 	}
 }
 
+@media screen and (max-width: 670px) {
+	.separator
+	{
+		min-height: 345px;
+	}
+}
+
 @media screen and (max-width: 500px) {
 	.section.analytics
 	{
@@ -99,6 +106,13 @@
 		{
 			height: 280px;
 		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.separator
+	{
+		min-height: 525px;
 	}
 }
 
