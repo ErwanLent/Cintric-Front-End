@@ -8,7 +8,11 @@ $('document').ready(function(){
         Header Animation
     =======================================================================================*/
     loadScript();
-    loadChart();
+
+    if ($(window).width() > 460)
+    {
+    	loadChart();
+    }
 
 	setTimeout(function(){
 		$('.logo').removeClass('animated');
@@ -45,13 +49,19 @@ $('document').ready(function(){
 
 	// Initial trigger
 	setTimeout(function(){
-		hideCard();
+		//hideCard();
 	}, 2000);
 
 	$('.section.demo ul li').on(transitionPrefixes, function() {
 		if (isNoneShowing)
 		{
+			// Hide previous card
+			var previousCardCounter = ((counter - 1) < 0) ? numberOfCards - 1 : counter - 1;
+			$('.section.demo ul li').eq(previousCardCounter).hide();
+
+			// Show next card and animate in
 			$('.section.demo ul li').eq(counter).show();
+
 			setTimeout(function(){
 				$('.section.demo ul li').eq(counter).css('left', '0px');
 				isNoneShowing = false;
@@ -74,14 +84,7 @@ function hideCard()
 {
 	$('.section.demo ul li').eq(counter).css('left', '-100%');
 
-	if ((counter + 1) >= numberOfCards)
-	{
-		counter = 0;
-	}
-	else
-	{
-		counter++;
-	}
+	counter = ((counter + 1) >= numberOfCards) ? 0 : counter + 1;
 
 	$('.section.demo ul li').eq(counter).hide();
 	$('.section.demo ul li').eq(counter).css('left', '100%');

@@ -23,6 +23,62 @@
 	}
 }
 
+@media screen and (max-width: 975px) {
+	.section.demo
+	{
+		ul
+		{
+			.slide
+			{
+				.card
+				{
+					.overlay
+					{
+						.center
+						{
+							.description
+							{
+								margin-left: 130px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 830px) {
+	.section.demo
+	{
+		min-height: 1085px;
+
+		ul
+		{
+			min-height: 835px;
+			
+			.slide
+			{
+				.card
+				{
+					.overlay
+					{
+						min-height: 835px;
+
+						.center
+						{
+							.description
+							{
+								float: none;
+								margin: auto;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
 @media screen and (max-width: 815px) {
 	.navigation
@@ -109,6 +165,43 @@
 	}
 }
 
+@media screen and (max-width: 460px) {
+	#hero-bar
+	{
+		display: none;
+	}
+
+	.section.demo
+	{
+		min-height: 1200px;
+
+		ul
+		{
+			min-height: 870px;
+			
+			.slide
+			{
+				.card
+				{
+					.overlay
+					{
+						min-height: 875px;
+
+						.center
+						{
+							.description
+							{
+								float: none;
+								margin: auto;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 450px) {
 	.separator
 	{
@@ -120,6 +213,13 @@
 	.section.analytics .macbook
 	{
 		height: 210px;
+	}
+}
+
+@media screen and (max-width: 330px) {
+	.section.analytics
+	{
+		height: 850px;
 	}
 }
 

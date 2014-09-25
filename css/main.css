@@ -2638,9 +2638,10 @@ h1, h2, h3, h4, h5, h6 {
       .section.demo .slide .card .overlay .center {
         padding-top: 85px; }
         .section.demo .slide .card .overlay .center .description {
-          width: 400px;
+          width: 100%;
+          max-width: 400px;
           float: left;
-          margin-left: 230px; }
+          margin-left: 190px; }
           .section.demo .slide .card .overlay .center .description h1 {
             font-family: allerbold;
             color: white;
@@ -2648,9 +2649,10 @@ h1, h2, h3, h4, h5, h6 {
           .section.demo .slide .card .overlay .center .description p {
             text-align: justify;
             color: white;
-            width: 400px; }
+            max-width: 400px; }
         .section.demo .slide .card .overlay .center img {
-          width: 200px; }
+          width: 100%;
+          max-width: 200px; }
 
 .section.analytics {
   min-height: 980px;
@@ -2698,7 +2700,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 50px;
     font-weight: 100;
     font-family: 'weblysleek_uilight';
-    padding-top: 75px; }
+    padding-top: 85px; }
   .separator .icons {
     list-style: none;
     padding: 0;
@@ -2913,6 +2915,19 @@ footer {
     margin: auto; }
   .explanation h1 {
     padding-top: 0px; } }
+@media screen and (max-width: 975px) {
+  .section.demo ul .slide .card .overlay .center .description {
+    margin-left: 130px; } }
+@media screen and (max-width: 830px) {
+  .section.demo {
+    min-height: 1085px; }
+    .section.demo ul {
+      min-height: 835px; }
+      .section.demo ul .slide .card .overlay {
+        min-height: 835px; }
+        .section.demo ul .slide .card .overlay .center .description {
+          float: none;
+          margin: auto; } }
 @media screen and (max-width: 815px) {
   .navigation .inner .full-logo {
     display: none; }
@@ -2944,9 +2959,25 @@ footer {
     min-height: 800px; }
     .section.analytics .macbook {
       height: 280px; } }
+@media screen and (max-width: 460px) {
+  #hero-bar {
+    display: none; }
+
+  .section.demo {
+    min-height: 1200px; }
+    .section.demo ul {
+      min-height: 870px; }
+      .section.demo ul .slide .card .overlay {
+        min-height: 875px; }
+        .section.demo ul .slide .card .overlay .center .description {
+          float: none;
+          margin: auto; } }
 @media screen and (max-width: 450px) {
   .separator {
     min-height: 525px; } }
 @media screen and (max-width: 390px) {
   .section.analytics .macbook {
     height: 210px; } }
+@media screen and (max-width: 330px) {
+  .section.analytics {
+    height: 850px; } }

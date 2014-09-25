@@ -361,9 +361,10 @@
 
                     .description
                     {
-                        width: 400px;
+                        width: 100%;
+                        max-width: 400px;
                         float: left;
-                        margin-left: 230px;
+                        margin-left: 190px;
 
                         h1
                         {
@@ -376,13 +377,14 @@
                         {
                             text-align: justify;
                             color: white;
-                            width: 400px;
+                            max-width: 400px;
                         }
                     }
 
                     img
                     {
-                        width: 200px;
+                        width: 100%;
+                        max-width: 200px;
                     }
                 }  
             }
@@ -461,7 +463,7 @@
         font-size: 50px;
         font-weight: 100;
         font-family: 'weblysleek_uilight';
-        padding-top: 75px;
+        padding-top: 85px;
     }
 
     .icons
