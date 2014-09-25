@@ -7,7 +7,11 @@ $('document').ready(function(){
     /*=====================================================================================
         Header Animation
     =======================================================================================*/
-    loadScript();
+    if ($(window).width() > 870)
+    {
+    	loadScript();
+    }
+    
 
     if ($(window).width() > 460)
     {
@@ -49,7 +53,7 @@ $('document').ready(function(){
 
 	// Initial trigger
 	setTimeout(function(){
-		//hideCard();
+		hideCard();
 	}, 2000);
 
 	$('.section.demo ul li').on(transitionPrefixes, function() {
