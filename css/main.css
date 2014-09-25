@@ -2455,7 +2455,7 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   width: 200px;
   border-radius: 7px;
-  padding: 7px 0px;
+  padding: 9px 0 7px 0;
   margin: 50px auto;
   cursor: pointer;
   width: 175px; }
@@ -2599,15 +2599,16 @@ h1, h2, h3, h4, h5, h6 {
     margin: 20px auto 20px auto; }
 
 .section.demo {
-  min-height: 950px;
+  min-height: 875px;
   background-color: white; }
   .section.demo h1 {
-    margin-bottom: 50px; }
+    margin-bottom: 50px;
+    padding-top: 130px; }
   .section.demo ul {
     list-style: none;
     width: 100%;
     max-width: 1180px;
-    min-height: 565px;
+    min-height: 500px;
     position: absolute;
     overflow: hidden;
     padding: 0;
@@ -2634,14 +2635,14 @@ h1, h2, h3, h4, h5, h6 {
     background-size: cover;
     margin-bottom: 100px; }
     .section.demo .slide .card .overlay {
-      min-height: 565px; }
+      min-height: 500px; }
       .section.demo .slide .card .overlay .center {
-        padding-top: 85px; }
+        padding-top: 70px; }
         .section.demo .slide .card .overlay .center .description {
           width: 100%;
-          max-width: 400px;
+          max-width: 500px;
           float: left;
-          margin-left: 190px; }
+          margin-left: 150px; }
           .section.demo .slide .card .overlay .center .description h1 {
             font-family: allerbold;
             color: white;
@@ -2664,6 +2665,8 @@ h1, h2, h3, h4, h5, h6 {
   .section.analytics .overlay {
     z-index: 100;
     position: relative; }
+    .section.analytics .overlay h1 {
+      padding-top: 50px; }
   .section.analytics .macbook {
     background-image: url("/img/macbook.png");
     background-repeat: no-repeat;
@@ -2732,8 +2735,10 @@ h1, h2, h3, h4, h5, h6 {
       width: 250px; }
 
 .section.early-access {
-  min-height: 500px;
+  min-height: 400px;
   background-color: white; }
+  .section.early-access h1 {
+    padding-top: 50px; }
   .section.early-access .email-form {
     margin-top: 70px;
     margin-right: 5px;
@@ -2917,10 +2922,10 @@ footer {
     padding-top: 0px; } }
 @media screen and (max-width: 975px) {
   .section.demo ul .slide .card .overlay .center .description {
-    margin-left: 130px; } }
+    margin-left: 75px; } }
 @media screen and (max-width: 830px) {
   .section.demo {
-    min-height: 1085px; }
+    min-height: 1110px; }
     .section.demo ul {
       min-height: 835px; }
       .section.demo ul .slide .card .overlay {
@@ -2964,7 +2969,7 @@ footer {
     display: none; }
 
   .section.demo {
-    min-height: 1200px; }
+    min-height: 1215px; }
     .section.demo ul {
       min-height: 870px; }
       .section.demo ul .slide .card .overlay {

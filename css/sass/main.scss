@@ -39,7 +39,7 @@
     color: white;
     width: 200px;
     border-radius: 7px;
-    padding: 7px 0px;
+    padding: 9px 0 7px 0;
     margin: 50px auto;
     cursor: pointer;
     width: 175px;
@@ -285,12 +285,13 @@
 
 .section.demo
 {
-    min-height: 950px;
+    min-height: 875px;
     background-color: white;
 
     h1
     {
         margin-bottom: 50px;
+        padding-top: 130px;
     }
 
     ul
@@ -298,7 +299,7 @@
         list-style: none;
         width: 100%;
         max-width: 1180px;
-        min-height: 565px;
+        min-height: 500px;
         position: absolute;
         overflow: hidden;
         padding: 0;
@@ -353,18 +354,18 @@
 
             .overlay
             {
-                min-height: 565px;
+                min-height: 500px;
 
                 .center
                 {
-                    padding-top: 85px;
+                    padding-top: 70px;
 
                     .description
                     {
                         width: 100%;
-                        max-width: 400px;
+                        max-width: 500px;
                         float: left;
-                        margin-left: 190px;
+                        margin-left: 150px;
 
                         h1
                         {
@@ -408,6 +409,11 @@
     {
         z-index: 100;
         position: relative;
+
+        h1
+        {
+            padding-top: 50px;
+        }
     }
 
     .macbook
@@ -518,8 +524,13 @@
 
 .section.early-access
 {
-    min-height: 500px;
+    min-height: 400px;
     background-color: white;
+
+    h1
+    {
+        padding-top: 50px;
+    }
 
     .email-form
     {
