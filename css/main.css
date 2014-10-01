@@ -2657,7 +2657,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .section.analytics {
   min-height: 980px;
-  background-color: white; }
+  background-color: white;
+  margin-top: 100px; }
   .section.analytics .content {
     position: absolute;
     text-align: center;

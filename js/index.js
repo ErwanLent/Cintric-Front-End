@@ -39,12 +39,6 @@ $('document').ready(function(){
 		$('.call').removeClass('hidden');
 	}, 1800);
 
-	$('#find-out, .early').click(function(){
-		$('html, body').animate({
-    		scrollTop: $(".early-access").offset().top
- 		}, 2000);
-	});
-
     /*=====================================================================================
         Card Animation
     =======================================================================================*/
@@ -52,9 +46,9 @@ $('document').ready(function(){
 	var transitionPrefixes = 'transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd';
 
 	// Initial trigger
-	setTimeout(function(){
-		hideCard();
-	}, 2000);
+	// setTimeout(function(){
+	// 	hideCard();
+	// }, 2000);
 
 	$('.section.demo ul li').on(transitionPrefixes, function() {
 		if (isNoneShowing)
@@ -78,7 +72,26 @@ $('document').ready(function(){
 			}, 3000);
 		}
 	});
+
+	/*=====================================================================================
+	    On Click
+	=======================================================================================*/
+
+	$('#find-out, .early').click(function(){
+		$('html, body').animate({
+			scrollTop: $(".early-access").offset().top
+			}, 2000);
+	});
+
+
+	$('#email-submit').click(function() {
+		$('.inputs').fadeOut('slow', function(){
+			$('.email-form p').fadeIn();
+		});
+	});
+
 });
+
 
 /*=====================================================================================
     Functions
